@@ -1,0 +1,17 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>welcome to relative_urls</h1>
+    <a href="basic_app/other.html"> links to other page using hardcode path</a>
+    <a href="{% url 'basic_app:other' %}"> link to other page using relative path </a>
+    <a href="{% url 'admin:index' %}"> LINK TO ADMIN</a>
+    <a href="{% url 'index' %}"> LINK TO index</a>
+</body>
+
+</html>
