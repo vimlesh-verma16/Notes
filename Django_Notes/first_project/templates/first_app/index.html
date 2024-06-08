@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <title>Django logo page </title>
+</head>
+
+<body>
+
+    <h1>Hello this is index.html</h1>
+
+    <img src=" {% static 'images/django_pic.jpg' %}" alt="oh uh! didnt loaded">
+
+    <h1>Hello this is django Level two </h1>
+    <p>here we are trying to connect the models with view and template and getting the access record</p>
+
+
+    <div class="django_two">
+        {% if access_records %}
+        <table>
+            <thead>
+                <th> Site Name </th>
+                <th> date accessed</th>
+            </thead>
+            {% for acc in access_records %}
+            <thead>
+                <th> {{ acc.name }} </th>
+                <th> {{ acc.date }} </th>
+            </thead>
+            {% endfor %}
+
+        </table>
+        {% else %}
+        <p> no records are found </p>
+
+        {% endif %}
+    </div>
+
+
+
+</body>
+
+</html>
