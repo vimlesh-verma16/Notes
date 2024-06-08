@@ -1,0 +1,109 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    
+    
+}
+html{
+     font-size: 63%;
+     font-family:Arial, Helvetica, sans-serif; 
+}   
+.main-div{
+   
+    height:100vh;
+    width:100vw;
+    background-color:whitesmoke;
+    display: grid;
+    place-items: center;
+}
+.music-container{
+    height: 55rem;
+    width:35rem;
+    background-color:white;
+    border-radius:2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.2);
+    padding:2rem;
+    text-align: center;
+}
+.music-container #title{
+    text-transform:uppercase;
+    letter-spacing:0.2rem;
+    word-spacing: 0.5;
+    color:black;
+    margin : 2rem 0 0.5 0;
+    font-size:4rem;
+    font-weight:500;
+    text-shadow:0 0.2rem 0.5rem rgba(0,0,0,0.6);
+}
+.music-container #artist{
+    color:#cccaca;
+    text-transform:capitalize;
+    letter-spacing:0.2rem;
+    font-size:3rem;
+    margin-bottom:4rem;
+    font-weight:300;
+
+}
+.img-container{
+    width:25rem;
+    height:25rem;
+     margin:auto; 
+}
+img{
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+.music-controls .fas{
+    color:black;
+    font-size:2rem;
+    cursor:pointer;
+    filter:drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+    display
+
+}
+.music-controls{
+    width:20rem;
+    display :flex;
+    justify-content:space-between;
+    margin:auto;
+    margin-top:5rem;
+    align-items:center;
+
+}
+.music-controls .main-button{
+    width:5rem;
+    height:5rem;
+    border-radius:50%;
+    background-color:black;
+    color:whitesmoke;
+    display:flex;
+    justify-content:center;
+    font-size:2rem;
+    align-items: center;
+}
+ 
+.music-controls .fas:hover{
+    color:gray;
+}
+.music-controls .fa-play:hover{
+    background-color:wheat;
+    color:black;
+    box-shadow:0 1rem 2rem 0.2rem rgba(0,0,0,0.4);
+}
+.anime{
+    animation :rotateplayer 3s linear infinite;
+}
+@keyframes rotateplayer{
+    from{
+        transform:rotate(0deg);
+
+    }
+    to{
+        transform:rotate(360deg);
+    }
+
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            font-size: 80px;
+            font-weight: 900;
+            text-align: center;
+        }
+        img{
+            height: 400px;
+            width: auto;
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            width: 120px;
+        }
+
+        #container,a{
+            /* padding:40px 0 0 30%; */
+            margin-left: 20%;
+
+        }
+        li{
+            cursor: pointer;
+            border:2px solid gray ;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #green{
+            background-color: green;
+        }
+        #yellow{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id=col>
+        <ul>
+            <li class="list" id="red" onclick="changebg('red')"></li>
+            <li id="blue" class="list" onclick="changebg('blue')"></li>
+            <li id="green" class="list" onclick="changebg('green')"></li>
+            <li id="yellow" class="list" onclick="changebg('black')" ></li>
+        </ul>
+    </div>
+    <div id="container">
+        <a href="">About us</a>
+        <br>
+        <img src="2.jpg" alt="">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit consequatur saepe temporibus quasi, pariatur, laudantium beatae incidunt repudiandae, dolores animi doloremque quis voluptatibus dolore ipsam ipsa ex? Officiis ad similique laborum necessitatibus natus consequuntur illum inventore veritatis commodi veniam a non impedit expedita, consequatur facere omnis placeat fugiat quasi dignissimos nisi. Aliquam exercitationem id, eum magni nam, magnam voluptatem optio debitis qui asperiores soluta ex voluptas esse dignissimos molestias velit dolor, deserunt facilis consequuntur quaerat atque iure. Dicta alias commodi dolore ullam, eligendi cupiditate quisquam ad distinctio aspernatur, beatae ratione qui, repellendus iusto quas enim aliquam quam nostrum possimus minus.
+        </p>
+    </div>
+    <script>
+       function changebg(color){
+           document.body.style.backgroundColor=color;
+           if (color=="black"){
+               document.body.style.color="white";
+           }else{
+            document.body.style.color="black";
+           }
+       }
+    </script>
+</body>
+</html>

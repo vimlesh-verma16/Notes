@@ -1,0 +1,164 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightseagreen;
+  padding: 10px;
+}
+
+#container{
+  background-color: aqua;
+}
+
+
+.backbg{
+  background-color: lightpink;
+  font-size: x-large;
+
+  padding: 8px;
+  border-radius: 8rem;
+}
+
+#menu{
+  background-color: white;
+  /* height: 10px; */
+  padding: 5px;
+  display: none;
+}
+#menu img{
+  height: 50px;
+}
+#bodybg {
+  background-color: darkkhaki;
+  height: 100px;
+  width: 300px;
+}
+
+#btn {
+  border-radius: 5rem;
+  height: 30px;
+  width: 60px;
+  background-color:lightgrey;
+  position: relative;
+  cursor: pointer;
+}
+
+#circle {
+  background-color: white;
+  position: absolute;
+  height: 23px;
+  width: 25px;
+  border-radius: 50%;
+  top: 2.8px;
+}
+.left{
+    left: 2px;
+}
+.right{
+    right:2px ;
+}
+
+#info-container{
+  background-color: #6f2232 ;
+  height: 50rem;
+  width: 100%;
+  position: relative;
+  
+}
+
+#triangle{
+  color:black;
+  position: absolute;
+  right: 0%;
+  /* padding: 2rem; */
+  width: 0;
+  height: 0;
+  border-top: 20rem solid transparent;
+  border-right: 60rem solid #C3073f;
+  border-bottom: 20rem solid transparent;
+}
+.inner{
+  position: absolute;
+  top: 36%;
+  right: 15%;
+  color: black;
+  display: none;
+  border: 1px solid red;
+  width: 30rem;
+  text-align: center;
+}
+
+#upper{
+  position: absolute;
+  top: 38%;
+  right: 35%;
+}
+
+#arrows{
+  position: absolute;
+  top: 32%;
+  right: 35%;
+
+}
+
+#upperar{
+  margin-bottom: 7rem;
+}
+
+p{
+  margin-top:-0.5rem;
+}
+
+.lightbg{
+  height: 50vh;
+}
+
+.library{
+  background-color: rgba(124, 124, 124, 0.753);
+  display: flex;
+  justify-content: space-between;
+  
+  color:black;
+  padding: 1rem;
+  font-size: x-large;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.books{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color:gainsboro;
+  font-size: x-large;
+}
+
+@media screen and (max-width:415px){
+
+  .parent-menu{
+    flex-direction: column;
+    background-color: black;
+  }
+  .display-n{
+    display: none;
+    flex-direction: column;
+  }
+  .backbg{
+  background-color: black;
+}
+
+  #menu{
+    display: flex;
+  }
+  
+  .ham-menu{
+    color: white;
+}
+}

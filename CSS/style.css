@@ -1,0 +1,735 @@
+/* htmlcolorcodes.com */
+/* freepik.com free templates for css  */
+/* learn about pseudo classes from w3school; */
+/* freepnging.com  flaticon for icon in png */
+/* favicon.io get free favicon  */
+
+/* light weight framework is :- purecss */ 
+/* skeletol css */
+
+/* online photoshop editior  */
+/* css validation : w3c validator */
+
+/* --------------------------------------------------------------------- */
+
+/* tips and tricks for css
+
+use rem for font size ;
+link-https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984 */
+
+/* -------------------------------------------------------------------- */
+body {
+  border: 1px solid blue;
+  /* height:1000px; */
+}
+
+/* multiple backgound  & images */
+#img1 {
+  /* background-color: chartreuse; */
+  /* background-image: url('images/facebook.png'),url('images/beach.png'); */
+  background-image:url('images/maldive.jpg');
+  /* background-repeat: no-repeat;
+    background-position:left top,right bottom;
+    background-size:200px,200px; */
+  /* background-attachment: fixed; */
+  /* background: #ffff url('images/maldive.jpg') no-repeat fixed 5% 10%; */
+}
+
+/* border manipulations style color width radious etc */
+.border {
+  /* border-style: solid dashed none dotted; */
+  /* border-width: 10px; */
+  /* border-color: rebeccapurple; */
+
+  /* border:5px solid crimson; */
+  /* border-radius: 10px; */
+  /* border-top-left-radius: 20px; */
+
+  /* border-top-color:red ;
+    border-top-width: 15px;
+    border-top-style:solid ; */
+}
+
+/* height width etc */
+.div1 {
+  /* background-color: darkkhaki;
+    /* height:50%;
+    width:60%; */
+  /* max-height:200px; */
+  /* max-width: 300px; */
+  /* min-width: 500px;
+    min-height: 500px; */
+}
+
+/* the gap between the border and the content is called padding  */
+.padding1 {
+  /* padding-top: 50px;
+    padding-left: 50px;
+    padding:100px; */
+}
+
+/* the distance between two divs or two borders is margin  */
+/* .margi{
+    margin-top: 20px;
+    margin-bottom: -20px;
+    width:30%;
+    margin:20px auto 30px;
+}
+
+.border2{
+    border:1px solid red;
+} */
+
+.text {
+  color:blue;
+    text-align: center;
+    text-decoration: underline;
+    text-transform:lowercase;
+    line-height: 30px;
+    text-indent: 70px;
+    letter-spacing: ;
+  /* white-space: pre; */
+  /* writing-mode: vertical-rl; */
+}
+
+.shadow {
+  /* font-size: 80px;
+    text-shadow: 8px -8px 10px greenyellow; */
+}
+
+/* .div1 a:link{
+    color:white;
+    text-decoration: none;
+}
+.div1 a:visited{
+    color:greenyellow;
+}
+.div1 a:hover{
+    color:hotpink;
+}
+.div1 a:active{
+    color:saddlebrown  ;  
+} */
+/* 
+h1{
+    font-size:xx-large;
+    font-weight: 200;
+    font-family:abc;
+    font-weight: ;
+   
+} */
+
+div {
+  /* font-family: 'Poppins', sans-serif; ! important*/
+  /* font-weight: ; */
+  /* font-style: italic; */
+  /* font-size: large; */
+  /* font-weight:regular; */
+  /* font-family: att; */
+}
+
+/* adding font from fonts folder and download from fontsquirrel and extract it */
+
+/* @font-face {
+    font-family: abc;
+    src: url('fonts/AlexBrush-Regular.ttf');
+}
+
+@font-face {
+    font-family: att;
+    src: url('fonts/KaushanScript-Regular.otf');
+} */
+
+/* .cursor{
+    cursor: cell;
+} */
+
+.box-shadow{
+    border:4px solid teal;
+    background-color: cornflowerblue;
+    margin: 50px;
+    width:400px;
+    padding:10px;
+    box-shadow: -10px 20px 15px 3px gray;
+
+}
+
+.text-t h1{
+  color: white !important;
+  animation: text 0.5s linear infinite;
+}
+
+/* @keyframes text{
+  0%{
+    filter:invert(70%)
+  }
+  100%{
+    filter:invert(0%)
+  }
+} */
+@keyframes text{
+  0%{
+    filter:brightness(100%)
+  }
+  100%{
+    filter:brightness(30%)
+  }
+}
+/* opacity and filter  */
+#opacity{
+    background-color: green;
+    height:200px;
+    width: 600px;
+    margin-bottom:20px ;
+    opacity: 0.3 ;
+    
+}
+
+#im {
+  /* opacity: 0.2; */
+  /* filter: blur(3px); */
+  /* filter: hue-rotate(90deg); */
+  /* filter: invert(100%); */
+}
+
+/* linear gradient and radial linearGradient */
+.linear-gradient {
+  /* height:200px; */
+  /* border:2px solid red; */
+  /* background-image: linear-gradient(to bottom left,yellowgreen,yellow,greenyellow); */
+  /* background-image: radial-gradient(circle,cyan 10%,yellow 40%,greenyellow 30%); */
+}
+
+/* overflow in text and making ::-webkit-scrollbar-button */
+.overflow {
+  /* border:2px solid red;
+    background-color: beige;
+    color:black;
+    height:50px;
+    width:50%;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    overflow:auto;
+
+    /* vertical horizontal or both */
+  /* resize:vertical;  */
+}
+
+/* list style tyle  */
+li {
+  /* border:1px solid red; */
+}
+
+.olul ul {
+  /* list-style-image:url(images/arr.png);
+    list-style-position: inside;
+    color: blue; */
+}
+
+.olul ol {
+  /* list-style-type: lower-roman; */
+}
+
+table {
+  /* border:1px solid red;
+    border-collapse: separate;
+    border-spacing: 15px;
+    text-align: center;
+    empty-cells: hide; */
+}
+caption {
+  /* border:1px solid red;
+    caption-side: bottom; */
+}
+th {
+  /* border:1px solid red;
+    padding:15px; */
+}
+td {
+  /* border:1px solid red;
+    padding:8px; */
+}
+
+/* cal function  */
+#fun {
+  /* background-color: var(--primary-color);
+  height: 200px;
+  width: calc(100% - 200px); */
+}
+
+/* variable function very very important  */
+:root {
+  /* --primary-color:blue;
+    --btn-color:red;
+    --text-color:white; */
+}
+
+#button {
+  /* background-color:var(--btn-color);
+    padding:5px 9px;
+    margin:15px;
+    text-decoration: none;
+    color:var(--text-color);
+    border-radius: 5px; */
+}
+
+/* boxsizing very important  */
+.back1 {
+  background-color: teal;
+    height:200px;
+    width:600px;
+}
+
+.back2 {
+    background-color: cornflowerblue;
+    height:200px;
+    padding:20px;
+    width:600px;
+    border:10px solid white;
+    box-sizing: border-box; /*it is used to manipulate boxmodel things */
+}
+
+/* initial and inherit  */
+/* .green{
+     color:red;
+}
+.initial{
+    color:initial;
+}
+.inherit{
+    color:inherit;
+}
+.blue{
+    color:lawngreen;
+} */
+
+/* object fit is same as background image  */
+.objectfit {
+  /* border:1px solid blue;
+    height:400px;
+    width:600px;
+    object-fit:cover;
+    object-position:right; */
+}
+
+/* pseudo-classes  */
+li:nth-child(even) {
+  /* color:blueviolet; */
+}
+
+/* li:nth-child(3){
+    color:yellowgreen;
+} */
+
+.pseudoclass:focus{
+    border:3px solid green;
+}
+
+/* pseudo element  */
+/* .text::first-letter{
+    color:greenyellow;
+    font-size: 50px;;
+}
+h1::before{
+    content: url(images/arr.png);
+} */
+
+/*-------------------------------------------------------------------------- very important part starts here  */
+/* block
+1.start from new line.
+2. full width  .
+3. height and width. 
+<div>、<p>、<h1>...<h6>、<ol>、<ul>、<dl>、<table>、<address>、<blockquote>、<form>
+
+
+inline
+1.not new line start  .
+2. no full width(takes with acording to content) .
+3. we cannot  give height and width .
+<a>、<span>、<br>、<i>、<em>、<strong>、<label>、<q>、<var>、<cite>、<code>
+img
+input
+
+inline block 
+1.not new line start . 
+2. no full width(takes with acording to content) .
+3. we can give height and width . 
+<img><input>
+*/
+
+.display {
+  border: 1px solid red;
+  height: 100px;
+  width: 50%;
+  /* put block,inline and inline block & see the difference   
+    putinng none will hide the div or block*/
+  display: inline-block;
+}
+
+#hidden {
+  visibility: hidden;
+}
+
+/* relative ,fixed and absolute for position  
+and z-index for placing one above another */
+
+.parent{
+     border:1px solid red;
+     padding:20px;
+     margin:100px;
+     position:relative;
+}
+
+.one{
+    background:yellow;
+    height:100px;
+    width:100px;
+    display: inline-block;
+    /* relative takes top left from its current position or initial position */
+    position:relative;
+    top:50px;
+    right:-50px; 
+    z-index: 2;
+
+}
+.two{
+    background:green;
+    height:100px;
+    width:100px;
+    display: inline-block;
+    /* absolute calculate left,top from parent if parent is not positioned it takes from b0dy */
+    position:absolute;
+    /* position:fixed; */
+    left:0px;
+    bottom:;
+}
+.three{
+    background:blue;
+    height:100px;
+    width:100px;
+    display: inline-block
+    z-index:1;
+}
+
+
+/* float left and right  */
+#floatingimg1{
+    float:left;
+    width:100px;
+    padding:10px;
+  
+}
+#floatingimg2{
+    float:right;
+    width:100px;
+    padding:10px;
+}
+
+/* making the nav bar of landing page  */
+/* always use overflow:auto in parent when we use float */
+.imgfloat{
+    border:3px solid cyan;
+    overflow:auto;
+}
+.imgfloat img{
+    float:right;
+    height:300px;
+}
+.nav{
+    background-color: lawngreen;
+    color:black;
+    list-style-type: none;
+    overflow:auto;
+}
+.nav li{
+    color:black;
+    font-weight: bolder;
+    float:left;
+    padding:10px 20px ; 
+ 
+}
+
+/* 2d transform using transform   */
+.transformations{
+    height:60px;
+    border:1px solid green;
+    background-color: yellow;
+    
+    /* transform:matrix(scalex(),skewy(),skewx(),scaley(),translatex(),translatey()); */
+    transform:matrix(1,-0.1,0,1,0,0);
+}
+.transformations a{
+    background-color: darkgreen;
+    padding:10px 20px;
+    text-decoration: none;
+    color:darkorange;
+    position:relative;
+    top:20px;    
+    margin-left:200px;  
+}
+
+.transformations a:hover{
+    display:inline-block;
+    /* transform: translate(50px,-50px); */
+    /* transform: rotate(40deg); */
+    transform:scale(3,3);
+}
+
+/* 3d Transform  */
+.cover{
+  border:1px solid yellow;
+  height:250px;
+  width:250px;
+  margin:100px;
+}
+
+.content{
+   background-color: red;
+   height:250px;
+   width:250px;
+   /* transform: perspective(300px) rotate3d(0,2,0,20deg); */
+   transform: perspective(300px) translate3d(70px,0px,0px);
+}
+
+/* transitions  */
+.transition{
+  background-color: turquoise;
+  height:200px;
+  width:200px;
+  margin:50px;
+  /* transition-property: width,background-color; */
+  transition-property:all;
+  transition-duration:1s;
+  transition-delay: 500ms;
+}
+
+.transition:hover{
+  width:400px;
+  background-color: yellow;
+}
+
+/* CSS Animations  */
+
+@keyframes changecolor{
+  0% {background-color:red;}
+  25% {width:100px;}
+  50% {background-color:blue;}
+  75% {width:600px;}
+  100% {background-color:midnightblue;}
+}
+
+.animate{
+  background-color: olive;
+     height:200px;
+     width:250px;
+     animation-name: changecolor;
+     animation-duration: 5s;
+     animation-delay: 2s;
+     animation-iteration-count: infinite;
+}
+.animate2{
+  background-color: olive;
+     height:200px;
+     width:250px;
+     animation-name: changecolor;
+     animation-duration: 5s;
+     animation-delay: 2s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+}
+
+@keyframes changecolor1{
+  0% {background-color:red;border-radius: 0%;}
+  10% {background-color:greenyellow;border-radius: 10%;}
+  20% {background-color:red;border-radius: 20%;}
+  30% {background-color:blue;border-radius: 30%;}
+  40% {background-color:navy;border-radius: 40%;}
+  50% {background-color:mediumaquamarine;border-radius: 50%;}
+  60% {background-color:red;border-radius: 40%;}
+  70% {background-color:red;border-radius: 30%;}
+  80% {background-color:lightgreen;border-radius: 20%;}
+  90% {background-color:red;border-radius: 10%;}
+  100% {background-color:red;border-radius: 0%;}
+}
+
+.animate3{
+  background-color: plum;
+     height:200px;
+     width:250px;
+     animation-name: changecolor1;
+     animation-duration: 3s;
+     animation-delay: 1s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+}
+
+/* meida queries  */
+.mediadiv1{
+   background-color: rebeccapurple;
+   height:100px;
+   width:70%;
+   font-size: 60px;
+   float:left;
+}
+.mediadiv2{
+  background-color: seagreen;
+  height:100px;
+  width:30%;
+  font-size: 60px;
+  float:left;
+}
+
+@media screen and (max-width: 768px){
+  .mediadiv1{
+    width:50%;
+    background-color:;
+  }
+  .mediadiv2{
+    width:50%;
+  }
+}
+@media screen and (max-width: 400px){
+  .mediadiv1{
+    width:100%;
+  }
+  .mediadiv2{
+    width:100%;
+    background-color: yellow;
+  }
+}
+
+
+/* Advcanced selectors  */
+
+#selector li{
+  color:red;
+}
+
+a[href="https://www.google.com"]{
+  color: greenyellow;
+}
+
+input[type='password']{}
+
+/* it is used for debigging  */
+*{
+  /* border: 1px solid red; */
+}
+
+.advancedselect>h1{
+  color: greenyellow;
+}
+
+#selector+a{
+  color :hotpink;
+}
+
+
+/* flex box  */
+.flex-container{
+   background: navy;
+   display:flex;
+   /* flex-direction: row-reverse; */
+   height:400px;
+   /* flex-wrap: wrap; */
+   /* justify content works horizontally  */
+   /* justify-content: center; */
+   /* justify-content: space-around; */
+   /* align-items: stretch; */
+   /* it works vertically  while justify content works horizontally */
+   /* align-content:flex-start;  */
+  }
+
+.flex-child{
+  background-color: skyblue;
+  margin:20px;
+  padding:15px;
+  width:100px;
+  text-align:center;
+}
+
+#one{
+  order:3;
+  flex-grow: 1;
+  align-self: flex-start;
+}
+#two{
+  order:3;
+  flex-grow:5;
+  align-self: center;
+}
+#three{
+  order:1;
+  flex-grow:1 ;
+  align-self: flex-end;
+}
+
+/* making grid  */
+.grid-container{
+  background-color:limegreen;
+  padding:20px;
+  display:grid;
+  grid-template-columns: 200px 300px 200px ;
+  grid-template-rows: 100px 150px 200px;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: space-evenly;
+}
+
+.grid-item{
+  font-size: x-large;
+  color: black;
+  border: 1px solid black;
+  background-color: linen;
+  padding:10px;
+  text-align: center;
+}
+
+#grid-5{
+  /* grid-row-start: 1;
+  grid-row-end: 5;  */
+  
+  /*shortcut */
+  /* grid-column: 1/3; */
+
+  grid-area: 2/2/span 2/ span 3;
+
+  /* grid-area:row-start/coloumnstart/rowcombine/coloumcombine; */
+}
+
+/* Grid example  */
+.grid-example{
+  background-color:red;
+  padding:20px;
+  display:grid;
+  grid-template-areas: 
+  'header header header header header header'
+  'menu main main main right right'
+  'menu footer footer footer footer footer';
+  grid-gap: 10px;
+}
+
+.grid-ex-item{
+  font-size: x-large;
+  background-color: lightslategray;
+  border: 1px solid white;
+  padding:10px;
+  text-align: center;
+}
+
+#grid-ex-1{
+  grid-area: header;
+}
+#grid-ex-2{
+  grid-area: menu;
+}
+#grid-ex-3{
+  grid-area: main;
+}
+#grid-ex-4{
+  grid-area: right;
+}
+#grid-ex-5{
+  grid-area: footer;
+}
+ 

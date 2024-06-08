@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* #btn{
+            color:white;
+            background-color:green;
+        } */
+
+        .color {
+            background-color: yellow;
+            color: red;
+        }
+
+        .dim {
+            padding: 50px;
+            border: 1px solid red;
+        }
+
+        #box,
+        #box2 {
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+        }
+
+        #box2 {
+            background-color: red;
+        }
+
+        body {
+            height: 2000px;
+            background-color: yellow;
+        }
+
+        #mydiv {
+            background-color: blue;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button id="btn" name="form1" style="color:aqua" >send</button> -->
+
+    <!-- ---------------------------------------------------------- -->
+
+    <!-- <div id='box' class='color '>
+        <p>this is p tag for css styling getAttribute etc etc</p>
+    </div> -->
+
+    <!-- list of DOM EVENMTS search on google -->
+
+
+    <!-- <button id="btn" onclick='btnclick()'>Click Me</button>//method 1 -->
+
+    <!-- <button id="btn">Click Me</button>//method2  -->
+
+    <!-- pageloadevent  -->
+    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Pizigani_1367_Chart_10MB.jpg" alt="" width="500px" id='image1'> -->
+
+    <!-- mouseevents ------------------------------------------------ -->
+    <!-- 
+    <div id='box' onclick="left()" oncontextmenu="fun()" ></div>
+    <div id='box2'  ondblclick="double()" onmouseout="out()"></div> -->
+
+
+    <!-- keyboards event ----------------------------------------- -->
+
+    <!-- scroll events --------------------------------------- -->
+    <h1>
+        Scroll event
+    </h1>
+
+    <!-- input Events ---------------------------------- -->
+
+    <!-- <form action="">
+        <input type="text" id="myInput">
+    </form> -->
+
+    <!-- event bubllling and event capturing  -->
+
+    <!-- <div id="mydiv">
+        <button id="btn">Click Me</button>
+    </div> -->
+
+
+    <!-- prevent default  -->
+    <!-- <a href="https://www.google.com" id="anchor">click me</a>
+
+    <form action="" id="form">
+        <input type="text">
+        <input type="submit">
+    </form> -->
+
+    <!-- BROWSER OBJECT MODEL (BOM)----------------------------------------------------- -->
+
+    <!-- <button id="btn1">GOOGLE!</button>
+    <button id="btn2">YAHOO !</button>
+    <button id="btn3">CLOSE</button> -->
+
+    <!-- set timeout ans timeinterval 
+    -->
+    <!-- <button id='btn'>clear interval</button> -->
+
+    <!-- <button onclick="redirect()">redirect to google</button> -->
+    <!-- <button onclick="redirect()">reload</button> -->
+
+    <script>
+        // let btn=document.getElementById("btn");
+
+        //# getting started with css sytle 
+
+        // btn.setAttribute("class","form1");
+
+        // let val=btn.getAttribute("name");
+        // console.log(val);
+
+        // let rem=btn.removeAttribute("name");
+
+        // btn.style.cssText+="background-color:red;border:5px solid green;";
+
+        // btn.setAttribute("style",'color:white;background-color:red;');
+
+        // btn.style.color='red';
+
+        //  let css=getComputedStyle(btn);
+
+        //  console.log(css.color);
+
+        // -----------------------------------------------------------------------
+
+        // let box=document.getElementById("box");
+
+        // box.className+=' dim';
+        // box.classList.add("dim");
+        // box.classList.remove("dim");
+        // box.classList.replace("color","dim");
+        // let result=box.classList.contains("color","dim");
+        // console.log(result);
+
+        // box.classList.toggle("dim");
+
+        // console.log(box.className);
+        // console.log(box.classList);
+
+        // for(let css of box.classList){
+        //     console.log(css);
+        // };
+
+        // ---------------------------------------------------------------
+        // knowing the height and width of given element
+
+        // let width=box.offsetWidth;
+        // let height=box.offsetHeight;
+        // let width=box.clientWidth;//it removes border 
+        // let height=box.clientHeight;
+        // console.log(width);
+        // console.log(height);
+
+        // list of DOM EVENMTS search on google --------------------------------------------
+
+        // function btnclick(){
+        //     alert("button was clicked");
+        // }
+
+        // let btn=document.getElementById("btn");
+
+        // btn.addEventListener('click',btnclick)
+
+        //anonymous function example-------------------------
+        // let btn=document.getElementById("btn");
+        // btn.addEventListener('click',
+        // function(){
+        //     console.log("button was clicked");
+        // })
+        // btn.addEventListener('mouseover',
+        // function(){
+        //     console.log("mouseover is activated");
+        // })
+        // btn.addEventListener('mouseout',
+        // function(){
+        //     console.log("mouseout is activated");
+        // })
+
+        //remove event listners----------------------------------
+
+        // let btn=document.getElementById('btn');
+        // function click1(){
+        //     console.log('click1 activated')
+        // }
+        // function click2(){
+        //     console.log('click2 activated')
+        // }
+
+        // btn.addEventListener('click',click1);
+        // btn.addEventListener('click',click2);
+
+        // btn.removeEventListener('click',click2);
+
+
+        //PAGElOAD EVENT----------------------------------------------------------
+
+        // window.addEventListener('DOMContentLoaded',function(){
+        //  console.log("dom tree created")
+        // });
+
+        // let img =document.getElementById("image1");
+
+        // img.addEventListener('load',function(){
+        //  console.log("Fully loaded")
+        // });
+
+        // MOUSEVENTS ----------------------------------------
+        // function fun(){
+        //     alert('right click event');
+        // }
+        // function left(){
+        //     alert('left click event');
+        // }
+
+        // function double(){
+        //     alert('double click event');
+        // }
+        // function out(){
+        //     alert('mouseout event');
+        // }
+
+        // KeyboardEvent ----------------------------------------
+        // window.addEventListener('keydown',checkKey);
+        // window.addEventListener('keyup',checkKey);
+
+        // function checkKey(event){
+        //     console.log(event.key);
+        // }  
+
+        // SCROLL EVENTS -----------------------------------------------
+        // window.addEventListener('scroll',function(){ 
+        //     console.log("scrolling...")
+        // })
+
+        // window.addEventListener('wheel',function(event){
+        //     if (event.deltaY<0){
+        //         console.log("scrolling up....");
+        //     }else if(event.deltaY>0){
+        //         console.log("scrolling event down..")
+        //     }
+        // });
+
+        // window.addEventListener('scroll',function(){ 
+        // if(window.pageYOffset>150){
+        //     document.body.style.background="red";
+        // }else{
+        //     document.body.style.background="white";
+        // }
+        // });
+
+
+        // input events------------------------------------------------------
+        //  let x=document.getElementById("myInput");
+
+        //  x.addEventListener("focus",focusevent);
+        //  x.addEventListener("blur",blurevent);
+
+        //  x.addEventListener("change",function(){
+        //      console.log(this.value)
+        //  });
+
+        //  x.addEventListener("input",function(){
+        //      console.log(this.value)
+        //  });
+
+        //  function focusevent(){
+        //      x.style.background='yellow';
+        //  }
+
+        //  function blurevent(){
+        //      x.style.background='white';
+        //  }
+
+        // Event bubbling and event capturing ----------------------------------------------
+        // let d=document.getElementById("mydiv");
+        // let b=document.getElementById("btn");
+
+        // b.addEventListener("click",btnclicked);
+        // d.addEventListener("click",divclicked);
+        // document.body.addEventListener("click",bodyclicked);
+
+        // function btnclicked(event){
+        //     console.log("btn clicked...");
+        //     event.stopPropagation();
+        // }
+
+        // function divclicked(){
+        //     console.log("div clicked...");
+        // }
+        // function bodyclicked(){
+        //     console.log("body clicked...");
+        // }
+
+        // Prevent default event----------------------------------------------------------
+        // let link=document.getElementById("anchor");
+
+        // link.addEventListener("click",function(e){
+        //     console.log("anchor clicked");
+        //     e.preventDefault();
+        // });
+
+        // let form=document.getElementById("form");
+
+        // form.addEventListener('submit',function(e){
+        //  e.preventDefault();
+        // });
+
+
+        // BROWSER OBJECT MODEL (BOM)------------------------------------------------
+
+        // console.log(window.innerHeight);
+        // console.log(window.innerWidth);
+
+        // console.log(window.outerHeight);
+        // console.log(window.outerWidth);
+
+
+        // window.open search on google ------------------
+        // let btn1=document.getElementById("btn1");
+        // let btn2=document.getElementById("btn2");
+        // let btn3=document.getElementById("btn3");
+        // let url="https://www.google.com";
+
+        // let features="height=500,width=700";
+        // let win;
+        // btn1.addEventListener('click',function(){
+        //    win= window.open(url,'google',features)
+        // });
+
+        // btn2.addEventListener('click',function(){
+        //     window.open("https://www.yahoo.com",'google',features)
+        // });
+
+        // btn3.addEventListener("click",function(){
+        //     win.close();
+        // })
+
+        // set timeout and time interval -------------------------------------------
+
+        // setTimeout(myfun,5000);
+
+        // function myfun(){
+        //     alert("please subscribe....");
+        // }
+
+        // var t1=setInterval(intervalfun,2000);
+
+        // function intervalfun(){
+        //     console.log("please subscribe")
+        // }
+
+        // let btn1=document.getElementById("btn");
+
+        // btn1.addEventListener('click',function(){
+        //     clearInterval(t1);
+        // });
+
+
+        //LOCATION OBJECT-------------------------------------------
+        // console.log(location.href);
+        // console.log(location.pathname);
+        // console.log(location.protocol);
+
+        // function redirect(){
+        //     // location.href="https://www.google.com";
+        //     // location.assign("https://www.google.com");
+        //     // location.replace("https://www.google.com");
+        //     // location.reload();
+
+        // }
+
+        // NAVIGATOR OBJECT -------------------------------------------
+        // console.log(navigator.appName);    
+        // console.log(navigator.appVersion);   
+        // console.log(navigator.appCodeName); 
+        // console.log(navigator.cookieEnabled); 
+        // console.log(navigator.userAgent); 
+        // console.log(navigator.platform); 
+
+
+
+        // SCREEN OBJECT ----------------------------------------------------
+        // console.log(screen.height);
+        // console.log(screen.width);
+        // console.log(screen.colorDepth);
+        // console.log(screen.orientation);
+
+
+        //ES6------(important for interview)----------------------------------------------------------------------------
+        // var count =1;//it is a window object or global object
+        // console.log(window.count)
+
+        // let count=1;//it is not a global object property thats why we should use let 
+
+        //Defaultparameter----------------------------------------------------
+        // function talk(msg = "hii") {
+        //     console.log(msg);
+        // }
+
+        // talk();
+        // talk("hello vimlesh") 
+
+        //REST PARAMETERS---------------------------------------------------------- 
+        // function sum(...args){
+
+        //     let s=0;
+        //     for(let i=0;i<args.length;i++){
+        //         s+=args[i];
+        //     }
+        //     console.log(s);
+
+        // }
+        // sum(20,30,10);
+
+        //Spread operator----------------------------------------------
+        // let array1=[1,2,3];
+
+        // let array2 =[5,4,6,...array1];
+        // let array3 =[...array1,5,10,12,2331,...array1,4,6];
+
+        // console.log(array2);
+        // console.log(array3);
+
+
+        // for of ----------------------------------------------------------------------
+        // let score=[80,1,4,6,44,32,"hello"];
+        // for(let x of score){
+        //     console.log(x);
+        // }
+
+
+        //Template literals--------------------------------------------------------
+        // let str=`hello
+
+        // world`;
+        // console.log(str);
+        // let str1="vimlesh";
+        // console.log(`hello world i am ${str1}.`)
+
+
+        //Array Destructuring---------------------------------------------------------------
+        // let book = ["advanced js", 150, 100,,["tech gun",2021]];
+
+        // // let name=book[0];
+        // // let pages=book[1];
+        // // let price=book[2];
+        // let [name, page, price,public="default value",[publication,year]] = book;
+        // console.log(year);
+
+        //Object destructuring----------------------------------------------------
+
+        // let book={
+        //     name:"Advance js",
+        //     price:500,
+        //     pages:200,
+        //     publication:{
+        //         pub_name:"techgun",
+        //         year:2021 
+        //     }
+        // }
+
+        // let name=book.name;
+        // console.log(name);
+
+        // let {name,page,price,author="vimmu",publication:{pub,year}}=book;
+        // console.log(name);
+        // console.log(author);
+        // console.log(pub);
+
+        // ES6-- Modules-------------------------------------------------------------------
+
+
+        //OOP's-----------------------------------------------------------------
+        //constructor in ES5------------------------------------------------------------------
+
+        // function Person(fname, lname, age) {
+        //     this.firstname = fname;
+        //     this.lastname = lname;
+        //     this.age = age;
+        //     this.sayHi = function () {
+        //         alert("hello");
+        //     }
+
+        //     this.changeAge=function(newage){
+        //         this.age=newage;
+        //     }
+        // }
+
+        // let person1 = new Person("vimlesh", "verma", 25);
+
+        // person1.changeAge(23);
+
+        // let person2 = new Person("vimmu", "verma", 28);
+
+        // console.log(person1);
+        // console.log(person2);
+
+
+        //Prototype and inheretence-------------------------------------------------------------
+        // let person1={};
+
+        // console.log(person1);
+
+        // let person2={
+        //     name:"vishwajeet"
+        // };
+        // console.log(person2.hasOwnProperty('name'));
+
+        // function Person(n){
+        //     this.name=n;
+        // }
+
+        // let person3= new Person("ajeet");
+        // console.log(person3);
+
+        //-----------------------------------------------
+
+        // function Person(fname, lname, age) {
+        //     this.firstname = fname;
+        //     this.lastname = lname;
+        //     this.age = age;
+
+        // }
+
+        // Person.prototype.fullname = function () {
+        //     console.log(this.firstname + " " + this.lastname)
+        // };
+
+        // function Creature(ls){
+        //     this.lifespan=ls;
+        // };
+
+        // Creature.prototype.breath=function(){
+        //     console.log("breathing...");
+        // }
+
+
+
+        // let creature1=new Creature (100);
+        // // console.log(creature1);
+
+        // Person.prototype.__proto__=Object.create(Creature.prototype);
+
+
+        // let person1 = new Person("vishwajeet", "kumar", 22);
+        // let person2 = new Person("vimlesh", "verma", 28);
+
+        // console.log(person1);
+        // console.log(person2.breath());
+
+
+        //ES6 classes and object ,---------------------------------------------------------
+        // class person {
+        //     constructor(n,a) {
+        //         this.name=n;
+        //         this.age=a;
+        //     }
+
+        //     sayHi(){
+        //         console.log("Hi...")
+        //     }
+
+        //     static hello(){
+        //         console.log("hello");
+        //     }
+
+        //     static sproperty="something";//static does not get conntected to object thats why we cant see it and cant call it. it is connect to class so we have to call it with class name
+        // }
+
+        // let person1 = new person("vimmu",23);
+        // // person1.sayHi();
+        // person.hello();//you have to call static function with class name
+        // console.log(person.sproperty);
+
+        // console.log(person1);
+
+        //Inheritance-------------------------------------------------------------
+        // class emp{
+        //     constructor(n){
+        //         this.name=n;
+        //     }
+
+        //     msg(){
+        //         console.log("this is msg function...");
+        //     }
+        // }
+
+        // class manager extends emp{
+        //     constructor(n,w){
+        //         super(n);
+        //         this.department=w;
+        //     }
+
+        //     msg(){
+        //         console.log("this is manager");
+        //     }
+
+        //     info(){
+        //         this.msg();//calling other class method by super and same classs by this.
+        //         console.log(this.name+" is a manager of department"+this.department)
+        //     }
+        // }
+
+        // class admin extends manager{
+
+        // }
+
+        // let admin1=new admin("super child","hjkhdksa");
+        // console.log(admin1);
+
+        // let mng1=new manager("vimmu","web development");
+
+        // console.log(mng1.info());
+
+
+        //Public and private ------------------------------------------------------------------
+
+        // class emp{
+        //     #name="";
+        //     constructor(n){
+        //         this.#name=n;
+        //     }
+        //     #getName(){
+        //         console.log(this.#name);
+        //     }
+        //     pubfun(){
+        //         this.#getName();
+        //     }
+        // }
+
+        // let emp1=new emp("vimmu");
+        // // console.log(emp1.getName());//private method or property cannot be dirrectly accesed 
+
+        // console.log(emp1.pubfun());
+
+
+        //Mixin-----------------------------------------------------------------
+
+        // let usefullmethod={
+        //     sayhii(){
+        //         console.log("helo...");
+        //     },
+        //     saybye(){
+        //         console.log("bye...");
+        //     }
+        // };
+
+        // class user{
+        //     constructor(){
+        //         this.name="vimlesh";
+        //     }
+        // }
+
+        // class admin extends user{
+
+        // }
+
+        // Object.assign(admin.prototype,usefullmethod);
+
+        // let usr1=new user();
+        // // console.log(usr1.sayhii());
+
+        // let admin1 =new admin();
+        // console.log(admin1.saybye());
+
+        //Arrow Function--------------------------------------------------------------
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        // let sumA =(a,b)=>{
+        //     return a+b;
+        // }
+ 
+        let sumA = (a, b) => a + b;//when you have single line then denotation changes
+        
+        let double= a=>2*a;
+
+        let random =()=>Math.random();
+
+
+        console.log(sumA(2, 3));
+        console.log(sum(2, 3));
+        console.log(double(3));
+        console.log(random());
+
+        document.addEventListener('click',()=>console.log("clicked"));
+
+    </script>
+    <!-- <script type="module" src="./app.js"></script> -->
+</body>
+
+</html>

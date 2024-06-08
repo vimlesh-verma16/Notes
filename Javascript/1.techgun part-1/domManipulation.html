@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <ul>
+        <li class="cl ">item 1</li>
+        <li id="list2">item 2</li>
+        <li class="cl">item 3</li>
+    </ul>
+
+
+    <h2 class="intro">HEADING 1</h2>
+    <p class="intro">Paragraph 1</p>
+    <h2>HEADING 2</h2>
+    <p>Paragraph 2</p>
+    <h2>HEADING 3</h2>
+    <p class="intro">Paragraph 3</p>
+    <h2>Heading 1</h2>
+
+
+    <ul id="parent">
+        <li >list 1</li>
+        <li id="intro">list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <ul>
+        <li>list a</li>
+        <li>list b</li>
+        <li>list c</li>
+    </ul>
+    <script>
+        // # CALLING BY ID
+        // let ele = document.getElementById("list2");
+
+        // console.log(ele.innerHTML); 
+        // ele.innerHTML="<p> hello world<p>";//setting an element.
+
+
+
+        // # CALIING AN ELEMENT BY CLASS
+        // let elm = document.getElementsByClassName("cl");
+        // elm.innerHTML = "<p> Hello<p>";
+        // console.log(elm)
+        // for (let i = 0; i < elm.length; i++) {
+        //     elm[i].innerHTML = "<p>hello <p>";
+        // }
+
+
+        //# GETTING AN ELEMENT BY TAGS NAME
+        // let elm = document.getElementsByTagName("h2");
+        // for (let i = 0; i < elm.length; i++) {
+        //     elm[i].innerHTML = "hello";
+        // }
+
+
+        // #QUERY SELECTOR powerfull selecter
+        // let elm=document.querySelector("p.intro");
+        // let elm=document.querySelectorAll("p.intro");
+        // for( let i=0;i<elm.length;i++){
+        //     elm[i].innerHTML ="hello";
+        // }
+
+
+        //TRAVERSING ELEMENTS IN JS [INDIRECT SELECTION]
+        // let elm =document.getElementById("intro");
+        // let prt =elm.parentElement;
+        // console.log(prt);
+
+
+        // # SELECTING the first child of parent
+        // let elm = document.getElementById("parent");
+        // let node = elm.firstElementChild;
+        // let node =elm.children;
+        // console.log(node);
+
+
+        // # SELECTING THE SIBLING AT THE SAME LEVEL
+        // let elm = document.getElementById("intro");
+        // let node = elm.previousElementSibling;
+        // console.log(node);
+    </script>
+</body>
+
+</html>

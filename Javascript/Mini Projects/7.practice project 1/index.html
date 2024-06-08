@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li>
+                    <h1>Practice Project</h1>
+                </li>
+
+                <li id="btn" onclick="control()">
+                    <div class="left" id="circle"></div>
+                </li>
+                <!-- <li id="menu" onclick="menu()"><img id="img-menu" src="/menu.png" alt=""></li> -->
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <nav>
+            <ul class="parent-menu display-n" id="parent">
+                <li class="backbg ham-menu">Home</li>
+                <li class="backbg ham-menu">services</li>
+                <li class="backbg ham-menu">Others</li>
+                <li class="backbg ham-menu">Links</li>
+                <li class="backbg ham-menu">developer</li>
+            </ul>
+        </nav>
+    </div>
+    <div id="bodybg">
+        <p>This is background</p>
+    </div>
+    <div id="info-container">
+
+        <div id="triangle">
+
+        </div>
+        <div id="info" class="inner">
+            <h1>Camera</h1>
+            <p>48 Mega pixel true tone with sony imx768 sensor</p>
+        </div>
+        <div id="arrows">
+            <div id="upperar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-caret-up-fill"
+                viewBox="0 0 16 16" onclick="controller(-1)">
+                <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+            </svg>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-caret-down-fill"
+                viewBox="0 0 16 16" onclick="controller(1)">
+                <path
+                    d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+            </svg>
+            </div>
+
+            
+        </div>
+
+
+        <div id="" class="inner">
+            <h1>Water Proof </h1>
+            <p> water reistant upto 5 meters for 30 minutes </p>
+        </div>
+        <div id="" class="inner">
+            <h1>Processor</h1>
+            <p> 7nm dimensity mediatek processor </p>
+        </div>
+        <div id="" class="inner">
+            <h1>New 5g technology</h1>
+            <p>It comes with new 5g technology with a momster battery backup</p>
+        </div>
+    </div>
+   <hr>
+    <div class="lightbg">
+        <form action="" >
+            <fieldset>
+                <legend>Book Data</legend>
+                <label for="book">Book Name:</label>
+                <input type="text" name="first_name" id="book">
+                <label for="author">Auther Name:</label>
+                <input type="text" name="author_name" id="author">
+                <label for="unique" >Unique Code(Mobile No.):</label>
+                <input type="number" name="Unique_code" id="unique" min="9" maxlength="10">
+                <label for="person">Issuer:</label>
+                <input type="text" name="issuer_name" id="person">
+
+                <input type="submit" onclick="sub()">
+            </fieldset>
+            
+        </form>
+        <div>
+            <div class="library">
+                <div>S.NO</div>
+                <div>Book Name</div>
+                <div>Auther Name</div>
+                <div>Unique Code</div>
+                <div>Issuer</div>
+            </div>
+            <div class="books">
+                <div>0</div>
+                <div>jfsdkl</div>
+                <div>dvklfdjv</div>
+                <div>54421541515</div>
+                <div>hjhdfjhgkjsd</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

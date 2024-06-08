@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music-play</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="music-container">
+            <h2 id="title">Lotus lane</h2>
+            <h3 id="artist">the loyalist</h3>
+            <div class="img-container">
+                <img src="image/img-1.jpg" />
+            </div>
+            <div class="music-controls">
+                <i class="fas fa-backward" id="prev" title="previous"></i>
+                <i class="fas fa-play main-button" id="play" title="play"></i>
+                <i class="fas fa-forward" id="next" title="next"></i>
+            </div>
+            <audio src="audio/audio-1.mp3"></audio>
+
+        </div>
+    </div>
+    <script>
+        const img = document.querySelector("img");
+        const music = document.querySelector("audio");
+        const play = document.getElementById("play");
+        const title = document.getElementById("title");
+        const artist = document.getElementById("artist");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+        let isplaying = false;
+
+        const songs = [
+            {
+                name: "audio-1",
+                title: "Agar tu hota ",
+                artist: "ankit tiwari",
+                image: "img-1",
+            },
+            {
+                name: "audio-2",
+                title: "Jab tak",
+                artist: "arman malik",
+                image: "img-2",
+            },
+            {
+                name: "audio-3",
+                title: "agar tum sath ho ",
+                artist: "Unknown artist",
+                image: "img-3",
+            },
+        ]
+        //for play Function
+        const playmusic = () => {
+            isplaying = true;
+            music.play();
+            play.classList.replace("fa-play", "fa-pause");
+            img.classList.add("anime");
+        };
+        //for pause Function
+        const pausemusic = () => {
+            isplaying = false;
+            music.pause();
+            play.classList.replace("fa-pause", "fa-play");
+            img.classList.remove("anime");
+        };
+        play.addEventListener("click", () => {
+            if (isplaying) {
+                pausemusic();
+            }
+            else {
+                playmusic();
+            }
+        });
+        // changing the music data
+
+        const loadSong = (songs) => {
+            title.textContent = songs.title;
+            artist.textContent = songs.artist;
+            music.src = `audio/${songs.name}.mp3`;
+            img.src = `image/${songs.image}.jpg`;
+        };
+        songindex = 0;
+        const nextSong = () => {
+            songindex = (songindex + 1) % songs.length;
+            loadSong(songs[songindex]);
+            playmusic();
+        };
+        const prevSong = () => {
+            songindex = (songindex - 1 + songs.length) % songs.length;
+            loadSong(songs[songindex]);
+            playmusic();
+        };
+        next.addEventListener("click", nextSong);
+        prev.addEventListener("click", prevSong);
+    </script>
+</body>
+
+</html>

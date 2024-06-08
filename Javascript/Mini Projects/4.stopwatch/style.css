@@ -1,0 +1,53 @@
+
+body{
+    background-color: rgb(11, 197, 197);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+color: rgb(65, 57, 57);
+
+}
+h1{
+    align-self: flex-start;
+
+}
+.container{
+
+    padding:10px ;
+}
+
+.digit{
+    font-size: 100px;
+}
+.txt{
+    font-size: 50px;
+    padding-right: 15px;
+}
+
+.btn-container{
+    
+    display: flex;
+justify-content:center;
+padding: 25px;
+
+}
+
+button{
+    padding: 5px 20px;
+    font-size: xx-large;
+    color: white;
+}
+
+#stop{
+    background-color: rgb(250, 17, 17);
+
+}
+#start{
+    background-color: rgb(21, 255, 0);
+
+}
+#reset{
+    background-color: rgb(23, 111, 241);
+
+}

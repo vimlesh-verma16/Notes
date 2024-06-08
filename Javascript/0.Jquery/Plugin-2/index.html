@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="magnify-image-hover/css/jquery.jqZoom.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="magnify-image-hover/js/jquery.jqZoom.js"></script>
+</head>
+
+<body>
+    <div class="zoom-box">
+        <img id="product" src="/1.jfif" width="200" height="150" style="border: 3px solid yellow;">
+    </div>
+
+    <!-- <div>
+        <img  src="/1.jfif" width="200" height="150" style="border: 3px solid yellow;">
+    </div> -->
+    <script>
+        $(function () {
+            $("#product").jqZoom({
+                selectorWidth: 30,
+                selectorHeight: 30,
+                viewerWidth: 400,
+                viewerHeight: 300
+            });
+        })
+    </script>
+</body>
+
+</html>

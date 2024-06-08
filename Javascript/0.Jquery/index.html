@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+
+
+        // selector in jQuery
+        // $(".black").hide();
+        // $("p.black").hide();
+
+
+        // event handling in jquery 
+        $("#btn").click(function () {
+            $(this).hide();
+        });
+
+        $(".coloured-div").dblclick(function () {
+            $(".coloured-div").hide();;
+        });
+
+        // $(".coloured-div").mouseleave();
+        // $(".coloured-div").mouseenter();
+
+        // $(".coloured-div").hover(function () {
+        //     $("#pra").hide();
+        // } , function () {
+        //         $("#pra").show();
+        //     });
+
+        $(document).ready(function () {
+
+
+            $(".coloured-div").on({
+                click: function () {
+                    $(this).css("background-color", "blue");
+                },
+                mouseenter: function () {
+                    $(this).css("background-color", "red");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <!-- slector in jquwery -->
+
+    <!-- <p id="pra"> this is p tag with id </p>
+    <p class="black">this is p tag with class selector</p>
+    <p class="black">this is p tag with class selector</p> -->
+
+    <!-- event handling  -->
+    <!-- <p id="pra">this is p tag</p>
+
+    <button id="btn">Click</button>
+    <br>
+    <br>
+    <div class="coloured-div" style="background-color: brown;;height: 100px;width: 100px;"></div>
+      -->
+
+    <!-- effects  -->
+
+    <!-- <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+     <br><br>
+    <div class="coloured-div" style="background-color: brown;;height: 100px;width: 100px;"></div> -->
+
+    <!-- Manipulating Html  -->
+    <!-- <p>this is a p tag</p>
+    <button class="bttn1">buton 1</button>
+    <div id="color-div" style="background-color: chartreuse;height: 200px;width: 100px;">
+        <p>this is a <a href="">link</a> p tag</p>
+    </div> -->
+    <!-- 
+        <a href="https://www.youtube.com" id="link" 
+        
+        class="red">Google</a>
+        <input type="text" id="input">
+        <button id="inp">button all</button> -->
+
+    <!-- before  -->
+    <ul id="list">
+        <!-- prepend  -->
+        <li>red</li>
+        <li>black</li>
+        <li>green</li>
+        <!-- append  -->
+    </ul>
+    <!-- after  -->
+
+    <div class="box red" id="box">
+
+    </div>
+    <button id="btn-class">click</button>
+
+    <!-- traversing jquery with html  -->
+
+    <ul id="list5">
+        <!-- grandparents  -->
+        <li>
+            <!-- parent  -->
+            <span id="span1">item 1</span>
+            <!--child-->
+        </li>
+        <li>
+            <!-- parent  -->
+            <span id="span2">item 2</span>
+        </li>
+    </ul>
+
+    <!-- No conflicts  -->
+    <!-- <p id="nopra">it is a p tag</p>
+    <button id="bbtn">click</button> -->
+
+
+    <script>
+        // Effects --------------------------------------------------------
+        // $("#btn1").click(function(){
+        //     $(".coloured-div").slideToggle(1000);
+        // });
+
+        // // $("#btn2").click(function(){
+        // //     $(".coloured-div").fadeToggle(1000);
+        // // });
+
+        // $("#btn2").click(function(){
+        //     $(".coloured-div").animate({
+        //         opacity:"0.5",
+        //         height:'200px',
+        //         width:"50px"
+        //     },5000);
+        // });
+
+        // // $("#btn3").click(function(){
+        // //     $(".coloured-div").stop();
+        // // });
+
+        // $("#btn3").click(function(){
+        //     $(".coloured-div").hide(3000,function(){
+        //         alert("div hidden");
+        //     });
+        // });
+
+
+        // Chaining-----------------------------------------------
+        //  $("#btn1").click(function(){
+        //      $(".coloured-div").css("background-color","red").slideUp(2000).slideDown();
+        //  });
+
+
+        // Manipulating Html ----------------------------------------------------------
+        // $(".bttn1").click(function () {
+        //     var txt = $("#color-div").text();//.html(); for html tags too
+        //     alert(txt);
+        // });
+
+
+        // $(".bttn1").click(function () {
+        //     var txt = $("#color-div").html("<h1>heading<h1>");//.html(); for html tags too
+        // });
+
+        //getting value from form in input tag
+
+        // $("#inp").click(function () {
+        //     $("#link").attr({
+        //         "class": "black",
+        //         "href": "https://www.yahoo.com"
+        //     });
+        //     // alert("ok");
+        // });
+
+        // $("#list").prepend("<li>blue");
+        // $("#list").empty();
+        // $("#list").remove();
+
+        //manipulating class=---------------------------------------------------------------
+        // $("#btn-class").click(function(){
+        //     $("#box").toggleClass("circle red");
+        // })
+
+        // getting css color 
+        // $("#btn-class").click(function(){
+        //     var css=$("#box").css("background-color");
+        //     alert(css);
+        // });
+
+
+        // setting 
+        // $("#btn-class").click(function(){
+        //     $("#box").css({
+        //         "background-color":"yellow",
+        //         "border":"1px solid green"});
+
+        // });
+
+        //getting css height and width 
+
+        // $("#btn-class").click(function(){
+        //     var data=$("#box").outerHeight();
+        //     alert(data);
+        // });
+
+        //Traversing JQuery with html----------------------------------
+        // var elm=$("#span1").parentsUntil("body");
+        // elm.css("border","1px solid red");
+
+        // var elm1=$("#list5").find("#span2");
+        // elm1.css("border","1px solid blue");
+
+        //No conflicts------------------------------------------------------
+        // var jQ=$.noConflict();
+        // $("#bbtn").click(function () {
+        //     $("#nopra").text("text changed");
+        // });
+
+        //jQuery Plugin---------------------------------------------------------- jQuery script.net,Codepen.io,github,Best j query 
+        
+        //Plugin -1
+        
+         
+
+
+
+
+    </script>
+
+</body>
+
+</html>
