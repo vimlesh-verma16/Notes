@@ -10,4 +10,9 @@
     <h2>student name is {{student.name}} who's age is {{student.age}} </h2>
     {% endfor %}
 </div>
+
+<div class="container">
+    <p><a class="btn btn-warning" href="{% url 'basic_app:update' pk=school_detail.pk %}">Update</a></p>
+</div>
+
 {% endblock %}
