@@ -7,6 +7,9 @@ django-admin startproject first_project
 python manage.py runserver
 python manage.py startapp first_app
 
+python manage.py migrate
+python manage.py makemigrations first_app [for app]
+
 python manage.py shell (to test our models)
 >>> from first_app.models import Topic
 >>> print(Topic.objects.all())
@@ -32,3 +35,5 @@ django-admin startapp basicapp
 ------------------------------------
 pip install bcrypt
 pip install django[argon2]
+
+-------------------------------
