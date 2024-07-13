@@ -1,3 +1,27 @@
+Repo link https://github.com/Pierian-Data?tab=repositories
+----------------------------------------------
+Git command for setting up directory 
+
+echo "# myBlog" >> README.md
+git init
+git add README.md
+git add . 
+git commit -m "first commit"
+git remote add origin https://github.com/vimlesh-verma16/myBlog.git [ur link will come here]
+git push -u origin master
+
+------------------------------------------------
+Creating a requirement .txt file 
+
+pip freeze > requirements.txt
+
+To install the requirements use:
+pip3 install -r requirements.txt
+
+use pip list to list all version
+(myDjango) B:\repo\Blog_Project\mysite>pip list 
+Package                   Version
+----------------------------------------------
 Django is known for model template view(mtv)
 
 conda create --name myDjangoEnv django
@@ -35,5 +59,6 @@ django-admin startapp basicapp
 ------------------------------------
 pip install bcrypt
 pip install django[argon2]
-
 -------------------------------
+App Models -> Urls -> views.py -> forms.py -> urls.py
+
