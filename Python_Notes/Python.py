@@ -29,7 +29,7 @@
 '''STRING FUNCTION'''
 # print("hello world its py ".istitle())
 # print("hello world how are u its py".split("world"))
-# print("0".isalpha())
+# print("-".isalpha())
 # print("hello world its pyczcz2434 ".isnumeric())
 # print("hello world its pyczcz2434 ".isupper())
 # print("hello world its py ".find('its'))
@@ -92,7 +92,7 @@
 # list.remove(2) # remove elemnt 2 from the list
 # list.remove(2)  # remove another elemnt 2 from the list
 
-'''iterate over 2+ li at the same time '''
+'''iterate over 2+ list at the same time '''
 # name=['jack','john']
 # animal=['tiger','lion']
 # z=zip(name,animal)
@@ -724,10 +724,10 @@
 #     ('john', 'A', 15),
 #     ('jane', 'B', 12),
 #     ('dave', 'B', 10),
+#     ('davee', 'c', -1),
 # ]
 # l=sorted(student_tuples, key=itemgetter(2))
 # print(l)
-
 
 # x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
 # s = sorted(x.items(), key=itemgetter(1))
@@ -748,10 +748,10 @@
 
 # short trick to join string of array using map and * [very important]
 
-# arr = ['sunday', 'monday', 'tuesday', 'wednesday']
+# arr = ['sunday', "-1", 'monday', 'tuesday', 'wednesday']
 
 # # without using asterisk
-# print(' '.join(map(str,arr)))
+# print(' '.join(arr))
 
 # # using asterisk
 # print (*arr)

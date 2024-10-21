@@ -1,0 +1,79 @@
+----------------------------------------------
+Git command for setting up directory 
+
+echo "# myBlog" >> README.md
+git init
+git add README.md
+git add . 
+git commit -m "first commit"
+git remote add origin https://github.com/vimlesh-verma16/myBlog.git [ur link will come here]
+git push -u origin master
+
+----------------------------------------------------
+squash changes into 1 commit
+git rebase -i HEAD~10
+Keep the top most commit as pick and change rest of them to s (squash) again editor will open give the name to final commit
+git push -f
+
+--------------------------------------------------------------------
+
+To Save password credential
+git config --global credential.helper store
+
+------------------------------------------------------------------
+
+To make the branch exactly like the remote..
+
+git fetch --all
+git reset --hard origin/master (Works sometime )
+git reset --hard origin/<BRANCH_NAME>
+git clean -fdx # STAY ALERT! Untracked (.gitignore) directories and files will be gone!
+
+-------------------------------------------------------------------
+
+git log --online
+git reset --hard HEAD~1  (for reverting the last 1 commit)
+
+---------------------------------------------
+
+git branch -D vimlesh/pumas_2023  (Delete a branch)
+
+delete all the branches except the one you are using
+
+for /f "delims=" %i in ('git branch ^| findstr /v "vimlesh/scanning_stscpplatest_testing"') do git branch -D %i
+
+-------------------------------------------------
+
+Git commands for manupulating the directory (folder)
+1. mkdir phantoms (creating a folder)
+2. rmdir phantoms    (deleting a folder)
+3.  git mv <D:repo/fullpath/file.py> <D:repo/fullpathtofolder>  (Renaming and moving a file)
+
+---------------------------------------------
+
+Revert a specif commit
+git revert --no-commit 8d933eebc3a6553e0f6a6eb15921dd3cb7013920
+
+-----------------------------------------------------------------------
+
+remove a file from commit history or PR
+
+1) Make sure that you have checked out the feature branch from which the PR has been created.
+2) Search the file commit history: git log "C:\GitRepos\MyProject\SomeFile.cs"
+git checkout <commit id> "C:\GitRepos\MyProject\SomeFile.cs"
+git commit -m "Remove the SomeFile.cs from PR"
+And push your changes. :)
+
+------------------------------------------------------------------------
+
+track changes to a specif files
+
+36
+to list only commits details for specific file changes,
+git log --follow file_1.rb
+to list difference among various commits for same file,
+git log -p file_1.rb
+to list only commit and its message,
+
+-----------------------------
+git log --follow --oneline file_1.rb

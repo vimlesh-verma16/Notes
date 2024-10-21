@@ -230,12 +230,12 @@
 #---------------------------------------------------------
 ''' linked list implimentation '''
 
-# class Node(object):
+# class Node():
 #     def __init__(self,data):
 #         self.data=data
 #         self.nextNode=None
 
-# class Linkedlist(object):
+# class Linkedlist():
 #     def __init__(self):
 #         self.head=None
 #         self.size=0
@@ -300,13 +300,13 @@
 #--------------------------------------------------------------
 '''Binary search Tree'''
 
-# class Node(object):
+# class Node:
 #     def __init__(self,data):
 #         self.data=data
 #         self.leftchild=None
 #         self.rightchild=None
 
-# class binarySearchTree(object):
+# class binarySearchTree:
 #     def __init__(self):
 #         self.root=None
 
@@ -622,15 +622,14 @@
 # heap=[]
 
 # nums=[4,8,2,7,3,-1,22]
-# # for i in nums:
-# # 	heappush(heap,i)
+# for i in nums:
+# 	heappush(heap,i)
 
-# # while(heap):
-# # 	print(heappop(heap))
+# while(heap):
+# 	print(heappop(heap))
 
 # heapify(nums)
 # print(nums)
-
 #---------------------------------------------------------------
 '''Graphs  TRaversals '''
 
