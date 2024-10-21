@@ -1,4 +1,53 @@
 
+class PlayerCharacter:
+    
+    membership = True # This is Class object attribute
+    def __init__(self,name='anonymous',age=18): #Constructor with default argument 
+        if (PlayerCharacter.membership):
+            self.__name = name  #attribute
+            self.__age = age  #make a private member variable  #Abstraction  (Private and public)with __
+
+        if age < 18:
+            print(f'{self.__name} below 18 year of age cant play') 
+    
+    @property
+    def name(self): 
+        return self.__name 
+
+    def run(self):
+        print(f'The {self.__name} is running')
+
+    def shout(self):
+        print("player is shouting")
+    
+    @classmethod 
+    def adding_things(cls,num1,num2): #cls stands for class it is class method
+        return cls("teddy",num1 + num2) #This can be used for instainting a object
+
+
+player1 = PlayerCharacter('tom',19)
+player2 = PlayerCharacter('cindy',1)
+player3 = PlayerCharacter()  # No argument given
+
+print(f'player name is: {player1.name}')
+#print(help(player1))
+player1.shout()
+player2.attack = 5 
+
+player4 = PlayerCharacter.adding_things(118,2)
+print("player name is:",player4.name)
+
+
+
+ 
+
+
+
+
+
+#----------------------------------------------------------
+# Code with harry 
+
 ''' Object Oriented programming '''
 # class Employee:
 #     company='Google'
@@ -6,12 +55,12 @@
 
 # harry=Employee()
 # rajni=Employee()
-# # Employee.company='youtube'
-# # print(harry.company)
-# # print(rajni.company)
+# Employee.company='youtube'
+# print(harry.company)
+# print(rajni.company)
 # # creating instance attribute for both the objects
 # harry.salary=300
-# # rajni.salary=400
+# rajni.salary=400
 # print(harry.salary)
 # print(rajni.salary)
 
@@ -52,9 +101,11 @@
 
 # harry=Employee('harry',100,'Gmail')
 # harry.getDetails()
+# harry.greet()
 
 ''' inheritance in Oops  '''
-# single level inheritance
+#single level inheritance
+
 # class Employee:
 #     company='Google'
 #     def showDetail(self):
