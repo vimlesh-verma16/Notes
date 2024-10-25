@@ -1,3 +1,4 @@
+#OOPs Implimentation for interviews
 
 class PlayerCharacter:
     
@@ -24,7 +25,6 @@ class PlayerCharacter:
     def adding_things(cls,num1,num2): #cls stands for class it is class method
         return cls("teddy",num1 + num2) #This can be used for instainting a object
 
-
 player1 = PlayerCharacter('tom',19)
 player2 = PlayerCharacter('cindy',1)
 player3 = PlayerCharacter()  # No argument given
@@ -37,12 +37,71 @@ player2.attack = 5
 player4 = PlayerCharacter.adding_things(118,2)
 print("player name is:",player4.name)
 
+#--------------------------------------------------------
+print("\n Inheritance--------------- \n")
+class User: # Parent
+    
+    def __init__(self,email):
+        self.email = email
+    def sign_in(self):
+        print("signing_in")
+
+class Wizard(User): #Child
+    def __init__(self,name,power):
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        print(f"Wizard is attacking with power of {self.power}")
+
+class Archer(User):  #Child
+    def __init__(self,name,arrow):
+        self.name = name
+        self.arrow = arrow
+
+    def attack(self):
+        print(f"Archer is attacking with arrow {self.arrow}")
 
 
- 
+wizard1 = Wizard("Jackob",10)
+archer1 = Archer("merlin",100)
+
+#In the above code both the Wizard and archer are sharing the signing functionality
+#this is inheritance
+
+wizard1.sign_in()
+print(wizard1.name)
+
+# -------------------------------------------------------------
+
+print("\n Polymorphism--- (Many Forms)----------------------------------------- \n")
+
+#Poly means - Many and morphism means -> forms
+
+def player_attack(char):
+    char.attack()
+    
+player_attack(wizard1)  #Same function behaving and retung differnt values
+player_attack(archer1)  #Getting the differnt output on running the same function
 
 
+#----------------------------------------------------------
+#Super
 
+class Wizard_2(User):
+    
+    def __init__(self,name,power,email): 
+        super().__init__(email)  #  User.__init__(self,email) this also means the same
+        self.name = name
+        self.power = power
+        
+wizardd = Wizard_2("batman",10,"vimmu@gmail.com")
+print(wizardd.email)  #Doesnt work since email is not initialized
+
+# ---------------------------------
+
+# Object_ Introspection 
+print(dir(wizardd))  # check what you have access to 
 
 
 #----------------------------------------------------------
