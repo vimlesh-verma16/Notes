@@ -10,7 +10,7 @@ class PlayerCharacter:
         if age < 18:
             print(f'{self.__name} below 18 year of age cant play') 
     
-    @property
+    @property  # without this we cannot access name from outside
     def name(self): 
         return self.__name 
 
