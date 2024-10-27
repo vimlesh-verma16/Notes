@@ -1,4 +1,3 @@
-----------------------------------------------
 Git command for setting up directory 
 
 echo "# myBlog" >> README.md
@@ -36,11 +35,11 @@ git reset --hard HEAD~1  (for reverting the last 1 commit)
 
 ---------------------------------------------
 
-git branch -D vimlesh/pumas_2023  (Delete a branch)
+git branch -D vimlesh (Delete a branch)
 
 delete all the branches except the one you are using
 
-for /f "delims=" %i in ('git branch ^| findstr /v "vimlesh/scanning_stscpplatest_testing"') do git branch -D %i
+for /f "delims=" %i in ('git branch ^| findstr /v "vimlesh/scan') do git branch -D %i
 
 -------------------------------------------------
 
