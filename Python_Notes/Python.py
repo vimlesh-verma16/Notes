@@ -460,7 +460,7 @@
 # print(b)
 # --------------------------------------------------------------------------------
 
-'''Lambda Function  or anonmous function'''
+'''Lambda Function  or anonmous function sort'''
 # people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]
 # result=[]
 # people.sort(key=lambda x: (-x[0], x[1]))
@@ -509,7 +509,7 @@
 # -----------------------------------------------------------
 
 '''Advanced python'''
-
+##sorting
 # from operator import itemgetter, attrgetter
 # student_tuples = [
 #     ('john', 'A', 15),
@@ -519,6 +519,9 @@
 # ]
 # l=sorted(student_tuples, key=itemgetter(2))
 # print(l)
+
+# student_tuples.sort(key = lambda x: x[2])
+
 
 # x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
 # s = sorted(x.items(), key=itemgetter(1))
