@@ -1,0 +1,42 @@
+---
+
+Section: 1 Installing python
+First check on cmd by typing python
+
+Download Python from here
+https://www.python.org/downloads/
+set customization in advanced option : install python for all user
+
+## type python on cmd and cmd in vscode
+
+Section: 2 Creating a virtual environments
+Creating a python virtual environment : https://docs.python.org/3/library/venv.html
+
+Go to that folder from CMD and run below command
+0.to upgrade pip : python.exe -m pip install --upgrade pip
+
+1. python -m venv fastapi-venv [Create virtual environments]
+2. fastapi-venv\scripts\activate.bat [Activate the environment]
+
+Now install packages inside environment
+
+1. pip install fastapi
+2. Check Fastapi version : pip show fastapi
+3. pip install uvicorn
+4. uvicorn --version
+
+run the server with below command
+uvicorn main:app --reload
+
+---
+
+Open the docs at:
+
+    Swagger UI: http://127.0.0.1:8000/docs
+    ReDoc: http://127.0.0.1:8000/redoc
+
+---
+
+till section 4 in main copy
+
+---
