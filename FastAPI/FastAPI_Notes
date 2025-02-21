@@ -1,5 +1,5 @@
----
 
+-------------------------------------------------------------------
 Section: 1 Installing python
 First check on cmd by typing python
 
@@ -7,8 +7,8 @@ Download Python from here
 https://www.python.org/downloads/
 set customization in advanced option : install python for all user
 
-## type python on cmd and cmd in vscode
-
+# type python on cmd and cmd in vscode terminal
+------------------------------------------------------------------------
 Section: 2 Creating a virtual environments
 Creating a python virtual environment : https://docs.python.org/3/library/venv.html
 
@@ -28,15 +28,49 @@ Now install packages inside environment
 run the server with below command
 uvicorn main:app --reload
 
----
+---------------------------------------------------------
 
 Open the docs at:
 
     Swagger UI: http://127.0.0.1:8000/docs
     ReDoc: http://127.0.0.1:8000/redoc
 
----
+----------------------------------------------------------------------
 
-till section 4 in main copy
+till section 4 in main copy (For beginning)
 
----
+-------------------------------------------------------------------
+
+ link to public repo https://github.com/aruj900/Python/blob/89ffaf9871c806f933d66b7065bc715184675764/FastApi/blog/hashing.py
+
+----------------------------------------------------
+
+Workflow order for FastAPI: 
+
+Models:
+Description: This step involves creating the database models. These models define the structure of the database tables and their relationships.
+Action: Make the database and connect the models with each other. It is suggested to delete the database before saving the file to ensure a clean state.
+Schemas:
+
+UserBase and ArticleBase:
+Description: These schemas are created to define the structure of the data received from the user. They are used when saving data to the database.
+UserDisplay and ArticlesDisplay:
+Description: These schemas are created to define the structure of the data that will be displayed to the user or sent to the frontend. They ensure that only the necessary fields are exposed.
+Database Functions:
+
+DbArticles (Database -> DB -> db_articles):
+Description: This section involves creating functions that will handle database operations. These functions will create, read, update, and delete data in the database.
+Action: Create functions that will create the data in the database and also create functions that will help in other database operations.
+
+Router: 
+create router such as create_article or get article in get and post queryparameter will be article display while in function it will be articlebase because we are getting the data from the user and display is for showing to the user 
+
+Action:
+Create Router: Define routers for different operations such as create_article or get_article.
+
+GET and POST Query Parameters:
+ArticleDisplay: Use ArticleDisplay schema for query parameters in GET and POST requests. This schema is used to define the structure of the data that will be displayed to the user or sent to the frontend.
+ArticleBase: Use ArticleBase schema within the function. This schema is used to define the structure of the data received from the user. It is used when saving data to the database.
+
+----------------------------------------------
+

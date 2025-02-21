@@ -13,7 +13,7 @@ class BlogModel(BaseModel):
     published: Optional[bool]
 
 
-# Combinening all three data types
+# combining all three data types
 @router.post("/new/{id}")
 def create_blog(
     blog: BlogModel, id: int, version: int

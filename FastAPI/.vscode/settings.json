@@ -1,7 +1,14 @@
 {
     "cSpell.words": [
+        "articlebase",
+        "autoflush",
         "fastapi",
+        "sessionmaker",
+        "sqltypes",
+        "Userbase",
         "uvicorn",
         "venv"
-    ]
+    ],
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "notebook.defaultFormatter": "ms-python.black-formatter"
 }
