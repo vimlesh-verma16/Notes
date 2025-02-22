@@ -74,3 +74,53 @@ ArticleBase: Use ArticleBase schema within the function. This schema is used to 
 
 ----------------------------------------------
 
+🚦 HTTP Status Code Categories
+Code Range	Category	Meaning
+1xx	Informational	Request received, processing
+2xx	Success	Request successful
+3xx	Redirection	Further action required
+4xx	Client Error	Issue with client request
+5xx	Server Error	Issue with server response
+
+
+🟢 1xx – Informational (Request received, continuing process)
+
+    100 Continue: Request is okay so far; continue sending body.
+    101 Switching Protocols: Server agrees to switch protocols.
+    102 Processing: Server is processing (WebDAV).
+
+✅ 2xx – Success (Request was successfully received, understood, and accepted)
+
+    200 OK: Request successful.
+    201 Created: Resource created successfully.
+    202 Accepted: Request accepted, processing not completed.
+    204 No Content: Successful request but no content to return.
+
+🔁 3xx – Redirection (Further action needed to complete request)
+
+    301 Moved Permanently: Resource moved to a new URL.
+    302 Found: Temporary redirection.
+    304 Not Modified: Cached version is still valid; no need to resend.
+
+⚠️ 4xx – Client Errors (Request has an error from the client side)
+
+    400 Bad Request: Malformed request.
+    401 Unauthorized: Authentication required.
+    403 Forbidden: Access denied.
+    404 Not Found: Resource not found.
+    408 Request Timeout: Client took too long to send request.
+
+🔥 5xx – Server Errors (Server failed to fulfill a valid request)
+
+    500 Internal Server Error: General server error.
+    502 Bad Gateway: Invalid response from upstream server.
+    503 Service Unavailable: Server temporarily overloaded or under maintenance.
+    504 Gateway Timeout: Upstream server didn’t respond in time.
+
+--------------------------------------------------
+
+Create react_app methods
+npx create-react-app test-app
+cd test-app
+npm start
+
