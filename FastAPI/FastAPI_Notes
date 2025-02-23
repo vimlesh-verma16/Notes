@@ -1,4 +1,6 @@
+https://fastapi.xiniushu.com/az/ 
 
+FastAPI Official Documentation today 
 -------------------------------------------------------------------
 Section: 1 Installing python
 First check on cmd by typing python
@@ -50,27 +52,25 @@ Workflow order for FastAPI:
 Models:
 Description: This step involves creating the database models. These models define the structure of the database tables and their relationships.
 Action: Make the database and connect the models with each other. It is suggested to delete the database before saving the file to ensure a clean state.
-Schemas:
 
+Schemas:
 UserBase and ArticleBase:
 Description: These schemas are created to define the structure of the data received from the user. They are used when saving data to the database.
 UserDisplay and ArticlesDisplay:
 Description: These schemas are created to define the structure of the data that will be displayed to the user or sent to the frontend. They ensure that only the necessary fields are exposed.
-Database Functions:
 
+Database Functions:
 DbArticles (Database -> DB -> db_articles):
 Description: This section involves creating functions that will handle database operations. These functions will create, read, update, and delete data in the database.
 Action: Create functions that will create the data in the database and also create functions that will help in other database operations.
 
-Router: 
-create router such as create_article or get article in get and post queryparameter will be article display while in function it will be articlebase because we are getting the data from the user and display is for showing to the user 
-
-Action:
-Create Router: Define routers for different operations such as create_article or get_article.
-
-GET and POST Query Parameters:
-ArticleDisplay: Use ArticleDisplay schema for query parameters in GET and POST requests. This schema is used to define the structure of the data that will be displayed to the user or sent to the frontend.
-ArticleBase: Use ArticleBase schema within the function. This schema is used to define the structure of the data received from the user. It is used when saving data to the database.
+Router:
+Description: Define routers for different operations such as create_article or get_article.
+Action: 
+- Create Router: Define routers for different operations such as create_article or get_article.
+- GET and POST Query Parameters:
+  - ArticleDisplay: Use ArticleDisplay schema for query parameters in GET and POST requests. This schema is used to define the structure of the data that will be displayed to the user or sent to the frontend.
+  - ArticleBase: Use ArticleBase schema within the function. This schema is used to define the structure of the data received from the user. It is used when saving data to the database.
 
 ----------------------------------------------
 
@@ -143,4 +143,15 @@ this - > current_user: UserBase = Depends(get_current_user) helps in adding auth
 username - > vim for username
 password -> vim
 
------------------------------------------
+-----------------------------------------------
+
+Debugging in FastAPI 
+ >Debug Restart -> Python Debugger -> FastAPI
+
+----------------------------------------------
+
+testing 
+pytest for running tests
+pytest -s [for printing print statments in python]
+
+-------------------------------------------------------

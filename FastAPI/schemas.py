@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import List
 
 
@@ -20,17 +20,14 @@ class UserDisplay(BaseModel):
     email: str
     items: List[Article] = []
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # used inside articlesDisplay
 class User(BaseModel):
     id: int
     username: str
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class ArticleBase(BaseModel):
@@ -46,5 +43,4 @@ class ArticleDisplay(BaseModel):
     published: bool
     user: User
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
