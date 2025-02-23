@@ -124,3 +124,23 @@ npx create-react-app test-app
 cd test-app
 npm start
 
+----------------------
+
+Generating random ssl key from python from terminal 
+
+python -c "import secrets; print(secrets.token_hex(32))"
+
+----------------------------------------------------
+
+Authorisation 
+
+Create a user first from create_user
+then try to authicate from authorisation once successfull it will show a lock sign
+then add the same thing as shown is get_article id function
+
+this - > current_user: UserBase = Depends(get_current_user) helps in adding authorisation at all the function 
+
+username - > vim for username
+password -> vim
+
+-----------------------------------------
