@@ -7,7 +7,7 @@ from routers import blog_get, article
 from routers import blog_post
 from routers import user
 from routers import product
-from routers import file
+from routers import file, dependencies
 from templates import template
 from auth import authentication
 from db import models
@@ -26,6 +26,7 @@ from fastapi.websockets import WebSocket
 app = FastAPI()
 
 app.include_router(authentication.router)
+app.include_router(dependencies.router)
 app.include_router(template.router)
 app.include_router(file.router)
 app.include_router(article.router)
