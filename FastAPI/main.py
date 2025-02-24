@@ -1,6 +1,7 @@
 # uvicorn main:app --reload
 # fastapi-venv\scripts\activate.bat
 # https://www.udemy.com/course/completefastapi/?couponCode=KEEPLEARNING
+# pip install -r requirements.txt
 # pip freeze > requirements.txt
 from fastapi import FastAPI
 from routers import blog_get, article
