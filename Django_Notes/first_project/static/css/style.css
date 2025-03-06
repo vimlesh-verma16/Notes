@@ -1,0 +1,16 @@
+
+/* 
+.django_two {
+    font-style: italic;
+    color: black;
+} */
+
+.head {
+    color: blue;
+}
+
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse; /* Ensures borders don’t double up */
+}

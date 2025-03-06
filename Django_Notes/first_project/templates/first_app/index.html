@@ -4,21 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <title>Django logo page </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"> {% endcomment %}
+    <title>Django level 2 </title>
 </head>
 
 <body>
 
-    <h1>Hello this is index.html</h1>
-
+    <h1 class="head">Hello World - index.html</h1>
     <img src=" {% static 'images/django_pic.jpg' %}" alt="oh uh! didnt loaded">
 
-    <h1>Hello this is django Level two </h1>
+    <h1>Hello welcome to django Level two </h1>
     <p>here we are trying to connect the models with view and template and getting the access record</p>
-
-
     <div class="django_two">
         {% if access_records %}
         <table>
@@ -27,21 +24,16 @@
                 <th> date accessed</th>
             </thead>
             {% for acc in access_records %}
-            <thead>
-                <th> {{ acc.name }} </th>
-                <th> {{ acc.date }} </th>
-            </thead>
+            <tr>
+                <td> {{ acc.name }} </td>
+                <td> {{ acc.date }} </td>
+            </tr>
             {% endfor %}
-
         </table>
         {% else %}
-        <p> no records are found </p>
-
+        <p> no access records were found </p>
         {% endif %}
     </div>
-
-
-
 </body>
 
 </html>
