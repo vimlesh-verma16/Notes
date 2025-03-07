@@ -113,3 +113,22 @@ filter for django templates
 {{ username|default:"Guest" }}
 {{ "This is a long sentence."|truncatewords:3 }}
 <h1>   {{ vimlesh| upper }}   </h1>
+
+
+-------------------------------------------
+
+#### Django Level 5 (UserAuthentication)
+
+Add this arrays in settings.py   
+
+PASSWORD_HASHERS  
+AUTH_PASSWORD_VALIDATORS  
+
+class Meta: 
+
+
+flow 
+models -> form -> admin
+
+
+
