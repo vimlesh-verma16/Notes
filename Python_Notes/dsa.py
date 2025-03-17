@@ -1,8 +1,8 @@
 # important programs for DSA
-''' Sorting'''
+"""Sorting"""
 
-'''Insertion Sort'''
-# by ravindra babu take example of deck of cards and start picking card and travesing back in array till 0 position and finding its right place and do swaps  
+"""Insertion Sort"""
+# by ravindra babu take example of deck of cards and start picking card and travesing back in array till 0 position and finding its right place and do swaps
 
 # nums = [2,-3,4,6,55,7,-2]
 # for i in range(len(nums)):
@@ -12,7 +12,7 @@
 #         j-=1
 # print(nums)
 
-#--------------------------------------------------------------
+# --------------------------------------------------------------
 # "Selection sort"
 # putinng the smallest element at the front of array
 
@@ -22,17 +22,17 @@
 #     for j in range(i+1,len(a)):
 #         if a[j]<a[index]:
 #             index=j
-  
+
 #     if index!=i:
 #         a[i],a[index]=a[index],a[i]
 #         print(a)
 
 # print(a)
 
-#------------------------------------------------------------------
+# ------------------------------------------------------------------
 
 # This algorithm is fastest on an extremely small or nearly sorted set of data.
-'''Bubble Sort'''
+"""Bubble Sort"""
 
 # num=[11,3,-1,4,9,10,16]
 # for i in range(len(num)):
@@ -43,8 +43,8 @@
 #             num[j+1]=temp
 #     print(num)
 
-#---------------------------------------------------------
-'''Counting Sort'''
+# ---------------------------------------------------------
+"""Counting Sort"""
 # Counting sort is efficient if the range of input data is not significantly greater than the number of objects to be sorted. Consider the situation where the input sequence is between range 1 to 10K and the data is 10, 5, 10K, 5K.
 
 # num=[9,2,0,4,1,2,3,4,5]
@@ -62,49 +62,58 @@
 #     arr[num[i]]=arr[num[i]]-1
 #     ans[arr[num[i]]]=num[i]
 # print(ans)
-#---------------------------------------------------------
+# ---------------------------------------------------------
 
-'''Merge Sort'''
-# def mergesort(nums):
-#     if len(nums)==1:
+"""Merge Sort"""
+
+
+# def mergesort(nums, start, end):
+#     if start >= end:
 #         return
-   
-#     middle=len(nums)//2
-#     left=nums[:middle]
-#     right=nums[middle:]
-#     mergesort(left)
-#     mergesort(right)
 
-#     i,j,k=0,0,0
-#     while i<len(left) and j<len(right):
-#         if left[i]<right[j]:
-#             nums[k]=left[i]
-#             i+=1
+#     middle = (start + end) // 2
+#     mergesort(nums, start, middle)
+#     mergesort(nums, middle + 1, end)
+#     merge(nums, start, middle, end)
+
+
+# def merge(nums, start, middle, end):
+#     left = nums[start : middle + 1]
+#     right = nums[middle + 1 : end + 1]
+
+#     i, j, k = 0, 0, start
+#     while i < len(left) and j < len(right):
+#         if left[i] < right[j]:
+#             nums[k] = left[i]
+#             i += 1
 #         else:
-#             nums[k]=right[j]
-#             j+=1
-#         k+=1
+#             nums[k] = right[j]
+#             j += 1
+#         k += 1
 
-#     while i<len(left):
-#         nums[k]=left[i]
-#         i+=1
-#         k+=1
-#     while j<len(left):
-#         nums[k]=right[j]
-#         j+=1
-#         k+=1
+#     while i < len(left):
+#         nums[k] = left[i]
+#         i += 1
+#         k += 1
 
-# nums=[6,-1,6,2,9,11]
-# mergesort(nums)
+#     while j < len(right):
+#         nums[k] = right[j]
+#         j += 1
+#         k += 1
+
+
+# # Example usage
+# nums = [6, -1, 6, 2, -float("inf"), 9, 0, float("inf"), 11]
+# mergesort(nums, 0, len(nums) - 1)
 # print(nums)
 
-'''Quick Sort'''
+"""Quick Sort"""
 # 1.Quick sort is fastest, but it is not always O(N*log N), as there are worst cases where it becomes O(N2).
 # 2.Quicksort is probably more effective for datasets that fit in memory. For larger data sets it proves to be inefficient so algorithms like merge sort are preferred in that case.
 # 3.Quick Sort in is an in-place sort (i.e. it doesn’t require any extra storage) so it is appropriate to use it for arrays.
 # def quicksort(nums,low,high):
 #     if low>=high:
-#         return 
+#         return
 
 #     pivot_index=partition(nums,low,high)
 #     quicksort(nums,low,pivot_index-1)
@@ -113,7 +122,7 @@
 # def partition(nums,low,high):
 #     pivot_index=(low+high)//2
 #     swap(nums,pivot_index,high)
-    
+
 #     i=low
 #     for j in range(low,high):
 #         if nums[j]<=nums[high]:
@@ -137,7 +146,7 @@
 
 # def quicksort(nums,low,high):
 #     if low>=high:
-#         return 
+#         return
 
 #     pivot_index=partition(nums,low,high)
 #     quicksort(nums,low,pivot_index-1)
@@ -150,7 +159,7 @@
 #         if nums[j]<=pivot:
 #             i+=1
 #             swap(nums,i,j)
-    
+
 #     swap(nums,i+1,high)
 #     return i+1
 
@@ -163,17 +172,17 @@
 # print(nums)
 # quicksort(nums,0,len(nums)-1)
 # print(nums)
-#-------------------------------------------------------------------
-'''Binary search '''
+# -------------------------------------------------------------------
+"""Binary search """
 
 # def binary(a,n):
 #     low=0
 #     high=len(a)-1
-    
+
 
 #     while low <= high:
 #         mid=(low+high)//2
-        
+
 #         if a[mid]<n:
 #             low=mid+1
 #         elif a[mid]>n:
@@ -189,16 +198,13 @@
 # r=binary(arr,num)
 # print(r )
 
-'''REcursive approach for binary search'''
+"""REcursive approach for binary search"""
 
 # nums=[12,3,3,4212,32,67,787,8,98,45,34,32]
 
 
-
-
-
 # -------------------------------------------------------------------------------
-'''Kadane Algorithm '''
+"""Kadane Algorithm """
 # a=[-2,-5,-8]
 # maxsum=0
 # cursum=0
@@ -211,10 +217,10 @@
 
 # print(maxsum)
 
-'''Kadane algo for both positive and negative '''
+"""Kadane algo for both positive and negative """
 # a=[1,2,3,-2,5]
 #     # meh=Max ending here
-#     # msf=Max so far 
+#     # msf=Max so far
 # meh=0
 # msf=float('-inf')
 # for i in range(len(a)):
@@ -227,8 +233,8 @@
 # print(msf)
 
 
-#---------------------------------------------------------
-''' linked list implimentation '''
+# ---------------------------------------------------------
+""" linked list implimentation """
 
 # class Node():
 #     def __init__(self,data):
@@ -297,8 +303,8 @@
 # print(llist.size)
 
 
-#--------------------------------------------------------------
-'''Binary search Tree'''
+# --------------------------------------------------------------
+"""Binary search Tree"""
 
 # class Node:
 #     def __init__(self,data):
@@ -330,25 +336,25 @@
 #     def removeNode(self,data,node):
 #         if not node :
 #             return node
-        
+
 #         if data<node.data:
 #             node.leftchild=self.removeNode(data,node.leftchild)
-        
+
 #         elif data>node.data:
 #             node.rightchild=self.removeNode(data,node.rightchild)
 
 #         else:
 #             if not node.leftchild and node.rightchild:
 #                 print('removing a leaf node')
-#                 del node 
+#                 del node
 #                 return None
-            
+
 #             if not node.leftchild:
 #                 print("removing node with single rightchild ")
 #                 tempnode=node.rightchild
 #                 del node
 #                 return tempnode
-            
+
 #             elif not node.rightchild:
 #                 print("removing node with single left child")
 #                 tempnode=node.leftchild
@@ -416,7 +422,7 @@
 # bst.Traverse()
 # ----------------------------------------------------------------------
 
-'''AVL Tree'''
+"""AVL Tree"""
 
 # class Node(object):
 
@@ -425,60 +431,60 @@
 # 		self.height = 0
 # 		self.leftChild = None
 # 		self.rightChild = None
-		
+
 # class AVL(object):
 
 # 	def __init__(self):
 # 		self.root = None
-		
+
 # 	def remove(self, data):
 # 		if self.root:
 # 			self.root = self.removeNode(data, self.root)
-		
+
 # 	def insert(self, data):
 # 		self.root = self.insertNode(data, self.root)
-		
+
 # 	def insertNode(self, data, node):
-	
+
 # 		if not node:
 # 			return Node(data)
-			
+
 # 		if data < node.data:
 # 			node.leftChild = self.insertNode(data, node.leftChild)
 # 		else:
 # 			node.rightChild = self.insertNode(data, node.rightChild)
-			
+
 # 		node.height = max( self.calcHeight(node.leftChild) , self.calcHeight(node.rightChild) ) + 1
-		
+
 # 		return self.settleViolation(data, node)
-	
+
 # 	def removeNode(self,data, node):
-	
+
 # 		if not node:
 # 			return node
-			
+
 # 		if data < node.data:
 # 			node.leftChild = self.removeNode(data, node.leftChild)
 # 		elif data > node.data:
 # 			node.rightChild = self.removeNode(data, node.rightChild)
 # 		else:
-		
+
 # 			if not node.leftChild and not node.rightChild:
-# 				print("Removing a leaf node...")	
+# 				print("Removing a leaf node...")
 # 				del node
 # 				return None
-			
+
 # 			if not node.leftChild:
 # 				print("Removing a node with a right child...")
 # 				tempNode = node.rightChild
-# 				del node			
+# 				del node
 # 				return tempNode
 # 			elif not node.rightChild:
 # 				print("Removing a node with a left child...")
 # 				tempNode = node.leftChild
 # 				del node
 # 				return tempNode
-				
+
 # 			print("Removing node with two children...")
 # 			tempNode = self.getPredecessor(node.leftChild)
 # 			node.data = tempNode.data
@@ -486,127 +492,127 @@
 
 # 		if not node:
 # 			return node; # if the tree had just a single node
-		
+
 # 		node.height = max( self.calcHeight(node.leftChild) , self.calcHeight(node.rightChild) ) + 1
-		
+
 # 		balance = self.calcBalance(node)
-		
+
 # 		# doubly left heavy situation
 # 		if balance > 1 and self.calcBalance(node.leftChild) >= 0:
 # 			return self.rotateRight(node)
-			
+
 # 		# left right case
 # 		if balance > 1 and self.calcBalance(node.leftChild) < 0:
 # 			node.leftChild = self.rotateLeft(node.leftChild)
 # 			return self.rotateRight(node)
-		
+
 # 		# right right case
 # 		if balance < -1 and self.calcBalance(node.rightChild) <= 0:
 # 			return self.rotateLeft(node)
-			
+
 # 		# right left case
 # 		if balance < -1 and self.calcBalance(node.rightChild) > 0:
 # 			node.rightChild = self.rotateRight(node.rightChild)
 # 			return self.rotateLeft(node)
-			
+
 # 		return node
-		
+
 # 	def getPredecessor(self, node):
-		
+
 # 		if node.rightChild:
 # 			return self.getPredecessor(node.rightChild)
-			
+
 # 		return node
-		
+
 # 	def settleViolation(self, data, node):
-	
+
 # 		balance = self.calcBalance(node)
-		
+
 # 		# this is the Case I !!!! left-left heavy situation
 # 		if balance > 1 and data < node.leftChild.data:
 # 			print("Left left heavy tree...")
 # 			return self.rotateRight(node)
-		
+
 # 		# this is the Case II right-right !!!!
 # 		if balance < -1 and data > node.rightChild.data:
 # 			print("Right right heavy tree...")
 # 			return self.rotateLeft(node)
-	
+
 # 		# left-right situation
 # 		if balance > 1 and data > node.leftChild.data:
 # 			print("Tree is left right heavy...")
 # 			node.leftChild = self.rotateLeft(node.leftChild)
 # 			return self.rotateRight(node)
-		
+
 # 		# right-left situation
 # 		if balance < -1 and data < node.rightChild.data:
 # 			node.rightChild = self.rotateRight(node.rightChild)
 # 			return self.rotateLeft(node)
 
 # 		return node
-	
-		
-# 	def calcHeight(self, node): 
-	
+
+
+# 	def calcHeight(self, node):
+
 # 		if not node:
 # 			return -1
-			
+
 # 		return node.height
-		
-# 	# if it returns value > 1  it means it is a left heavy tree --> right rotation 
+
+# 	# if it returns value > 1  it means it is a left heavy tree --> right rotation
 # 	#   < -1   right heavy tree -> left rotation
 # 	def calcBalance(self, node):
 
 # 		if not node:
 # 			return 0
-			
-# 		return self.calcHeight(node.leftChild) - self.calcHeight(node.rightChild);  
-	
+
+# 		return self.calcHeight(node.leftChild) - self.calcHeight(node.rightChild);
+
 # 	def traverse(self):
 # 		if self.root:
 # 			self.traverseInorder(self.root)
-	
+
 # 	def traverseInorder(self, node):
-		
+
 # 		if node.leftChild:
 # 			self.traverseInorder(node.leftChild)
-			
+
 # 		print("%s " % node.data)
-		
+
 # 		if node.rightChild:
 # 			self.traverseInorder(node.rightChild)
-	
+
 # 	def rotateRight(self, node):
-	
+
 # 		print("Rotating to the right on node " , node.data)
-		
+
 # 		tempLeftChild = node.leftChild
 # 		t = tempLeftChild.rightChild
-		
+
 # 		tempLeftChild.rightChild = node
 # 		node.leftChild = t
-		
+
 # 		node.height = max( self.calcHeight(node.leftChild) , self.calcHeight(node.rightChild) ) + 1
 # 		tempLeftChild.height = max( self.calcHeight(tempLeftChild.leftChild) , self.calcHeight(tempLeftChild.rightChild) ) + 1
-		
+
 # 		return tempLeftChild
-		
+
 # 	def rotateLeft(self, node):
-	
+
 # 		print("Rotating to the left on node " , node.data)
-		
+
 # 		tempRightChild = node.rightChild
 # 		t = tempRightChild.leftChild
-		
+
 # 		tempRightChild.leftChild = node
 # 		node.rightChild = t
-		
+
 # 		node.height = max( self.calcHeight(node.leftChild) , self.calcHeight(node.rightChild) ) + 1
 # 		tempRightChild.height = max( self.calcHeight(tempRightChild.leftChild) , self.calcHeight(tempRightChild.rightChild) ) + 1
-		
+
 # 		return tempRightChild
-		
-		
+
+
 # avl = AVL()
 # avl.insert(5)
 # avl.insert(3)
@@ -616,7 +622,7 @@
 # avl.traverse()
 
 # ------------------------------------------------------------------------------
-''' Heaps '''
+""" Heaps """
 # from heapq import heappush,heappop,heapify
 
 # heap=[]
@@ -630,19 +636,19 @@
 
 # heapify(nums)
 # print(nums)
-#---------------------------------------------------------------
-'''Graphs  TRaversals '''
+# ---------------------------------------------------------------
+"""Graphs  TRaversals """
 
-'''BFS'''
+"""BFS"""
 # class Node(object):
 # 	def __init__(self, name):
 # 		self.name = name
 # 		self.adjacencyList = []
 # 		self.visited = False
 # 		self.predecessor = None
-		
+
 # class BreadthFirstSearch(object):
-# 	def bfs(self, startNode):	
+# 	def bfs(self, startNode):
 # 		queue = []
 # 		queue.append(startNode)
 # 		startNode.visited = True
@@ -650,12 +656,12 @@
 # 		while queue:
 # 			actualNode = queue.pop(0)
 # 			print(actualNode.name)
-			
-# 			for n in actualNode.adjacencyList:   
+
+# 			for n in actualNode.adjacencyList:
 # 				if not n.visited:
-# 					n.visited = True 
+# 					n.visited = True
 # 					queue.append(n)
-					
+
 # node1 = Node("A")
 # node2 = Node("B")
 # node3 = Node("C")
@@ -670,7 +676,7 @@
 # bfs = BreadthFirstSearch()
 # bfs.bfs(node1)
 # ---------------------------------------------------------------------------
-''' DFS '''
+""" DFS """
 
 # class Node(object):
 
@@ -679,24 +685,24 @@
 # 		self.adjacenciesList = []
 # 		self.visited = False
 # 		self.predecessor = None
-		
+
 # class DepthFirstSearch(object): # BFS -> queue + layer by layer algorithm   DFS -> stack + goes as deep aspossible into the tree !!!
 
-# 	def dfs(self, node):	
+# 	def dfs(self, node):
 # 		node.visited = True
 # 		print(node.name)
-		
+
 # 		for n in node.adjacenciesList:
-# 			if not n.visited: 
+# 			if not n.visited:
 # 				self.dfs(n)
-		
-	
+
+
 # node1 = Node("A")
 # node2 = Node("B")
 # node3 = Node("C")
 # node4 = Node("D")
-# node5 = Node("E")		
-	
+# node5 = Node("E")
+
 # node1.adjacenciesList.append(node2)
 # node1.adjacenciesList.append(node3)
 # node2.adjacenciesList.append(node4)
@@ -707,9 +713,9 @@
 
 # -------------------------------------------------------------------------------------------
 
-'''Garphs shortest path finding algorithms'''
+"""Garphs shortest path finding algorithms"""
 
-'''Dijkstra algorithm'''
+"""Dijkstra algorithm"""
 # import heapq
 # import sys
 
@@ -719,7 +725,7 @@
 # 		self.weight = weight
 # 		self.startVertex = startVertex
 # 		self.targetVertex = targetVertex
-		
+
 # class Node(object):
 
 # 	def __init__(self, name):
@@ -728,10 +734,10 @@
 # 		self.predecessor = None
 # 		self.adjacenciesList = []
 # 		self.minDistance = sys.maxsize
-		
+
 # 	def __cmp__(self, otherVertex):
 # 		return self.cmp(self.minDistance, otherVertex.minDistance)
-		
+
 # 	def __lt__(self, other):
 # 		selfPriority = self.minDistance
 # 		otherPriority = other.minDistance
@@ -740,33 +746,33 @@
 # class Algorithm(object):
 
 # 	def calculateShortestPath(self, vertexList, startVertex):
-	
+
 # 		q = []
 # 		startVertex.minDistance = 0
 # 		heapq.heappush(q, startVertex)
-		
+
 # 		while q:
 # 			actualVertex = heapq.heappop(q)
-			
+
 # 			for edge in actualVertex.adjacenciesList:
 # 				u = edge.startVertex
 # 				v = edge.targetVertex
 # 				newDistance = u.minDistance + edge.weight
-				
+
 # 				if newDistance < v.minDistance:
 # 					v.predecessor = u
 # 					v.minDistance = newDistance
 # 					heapq.heappush(q, v)
-					
+
 # 	def getShortestPathTo(self, targetVertex):
 # 		print("Shortest path to vertex is: ", targetVertex.minDistance)
-		
+
 # 		node = targetVertex
-		
+
 # 		while node is not None:
 # 			print("%s " % node.name)
 # 			node = node.predecessor
-			
+
 # node1 = Node("A")
 # node2 = Node("B")
 # node3 = Node("C")
@@ -817,8 +823,8 @@
 # algorithm.calculateShortestPath(vertexList, node1);
 # algorithm.getShortestPathTo(node4);
 
-#----------------------------------------------------------------------------------
-'''Bellman ford algorithm '''
+# ----------------------------------------------------------------------------------
+"""Bellman ford algorithm """
 
 # import sys
 
@@ -830,60 +836,60 @@
 # 		self.predecessor = None
 # 		self.adjacenciesList = []
 # 		self.minDistance = sys.maxsize
-		
+
 # class Edge(object):
 
 # 	def __init__(self, weight, startVertex, targetVertex):
 # 		self.weight = weight
 # 		self.startVertex = startVertex
 # 		self.targetVertex = targetVertex
-		
+
 # class BellmanFord(object):
 
 # 	HAS_CYCLE = False
-	
+
 # 	def calculateShortestPath(self, vertexList, edgeList, startVertex):
-	
+
 # 		startVertex.minDistance = 0
-		
+
 # 		for i in range(0,len(vertexList)-1):
 # 			for edge in edgeList:
-			
+
 # 				u = edge.startVertex
 # 				v = edge.targetVertex
-				
+
 # 				newDistance = u.minDistance + edge.weight
-				
+
 # 				if newDistance < v.minDistance:
 # 					v.minDistance = newDistance
 # 					v.predecessor = u
-					
+
 # 		for edge in edgeList:
 # 			if self.hasCycle(edge):
 # 				print("Negative cycle detected...")
 # 				BellmanFord.HAS_CYCLE = True
 # 				return
-				
+
 # 	def hasCycle(self, edge):
 # 		if (edge.startVertex.minDistance + edge.weight) < edge.targetVertex.minDistance:
 # 			return True
 # 		else:
 # 			return False
-			
+
 # 	def getShortestPathTo(self, targetVertex):
 
 # 		if not BellmanFord.HAS_CYCLE:
 # 			print("Shortest path exists with value: ", targetVertex.minDistance);
-			
+
 # 			node = targetVertex
-			
+
 # 			while node is not None:
 # 				print(node.name)
 # 				node = node.predecessor
 # 		else:
 # 			print("Negative cycle detected...")
-			
-			
+
+
 # node1 = Node("A");
 # node2 = Node("B");
 # node3 = Node("C");
@@ -940,9 +946,9 @@
 # algorithm.calculateShortestPath(vertexList, edgeList, node1);
 # algorithm.getShortestPathTo(node7);
 
-#-------------------------------------------------------------------
+# -------------------------------------------------------------------
 
-'''dijisktra leetcode 743'''
+"""dijisktra leetcode 743"""
 # class Solution:
 #     def networkDelayTime(self, times, N, K):
 #         q, t, adj = [(0, K)], {}, collections.defaultdict(list)
@@ -957,9 +963,8 @@
 #         return max(t.values()) if len(t) == N else -1
 
 
-
-#-----------------------------------------------------------------------
-'''Shortest path algo  leetcode 743'''
+# -----------------------------------------------------------------------
+"""Shortest path algo  leetcode 743"""
 # class Solution:
 #     def networkDelayTime(self, times, N, K):
 #         t, graph, q = [0] + [float("inf")] * N, collections.defaultdict(list), collections.deque([(0, K)])
@@ -973,8 +978,8 @@
 #                     q.append((time + w, v))
 #         mx = max(t)
 #         return mx if mx < float("inf") else -1
-#------------------------------------------------------------------
-'''taking variable length parameters for functions'''
+# ------------------------------------------------------------------
+"""taking variable length parameters for functions"""
 # *args is used to give variable number of arguments in parameter
 # **kwargs is used to give variable numbe of argument with keywords in params
 
@@ -983,9 +988,9 @@
 #         print(i)
 # func(name='vimlesh',age='22')
 
-#-----------------------------------------------------------------
+# -----------------------------------------------------------------
 
-'''TAKING Multiple inputs and printing the string in lexographic order'''
+"""TAKING Multiple inputs and printing the string in lexographic order"""
 # from itertools import permutations
 # word,k = input().split()
 
@@ -997,7 +1002,7 @@
 #     r = ''.join(i)
 #     print(r)
 
-'''Taking multiple input at the same time '''
+"""Taking multiple input at the same time """
 # word,k = input().split()
 
 # x, y, z, n = (int(input()) for _ in range(4))
@@ -1007,7 +1012,7 @@
 # record=[[input(),float(input())] for i in range(n)]
 # print(record)
 
-''' list compreshension with nested list'''
+""" list compreshension with nested list"""
 # if __name__ == '__main__':
 #   n=int(input())
 #   re=[[input(),float(input())] for i in range(n)]
@@ -1021,7 +1026,7 @@
 # print(min(se))
 # print("\n".join([a for a,b in sorted(re) if b==min(se)]))
 
-'''getting queery sum and rounding off'''
+"""getting queery sum and rounding off"""
 # if __name__ == '__main__':
 #     n = int(input())
 #     student_marks = {}
@@ -1036,13 +1041,13 @@
 # newdict={name:sum(avg)/3 for name,avg in zip(k,v)}
 # print('{:.2f}'.format(newdict[input()]))
 
-'''getting digit till  2 decimal places '''
+"""getting digit till  2 decimal places """
 
 # float = 2.154327
 # format_float = "{:.2f}".format(float)
 # print(format_float)
 
-''' eval function '''
+""" eval function """
 # if __name__ == '__main__':
 #     l=[]
 #     N = int(input())
@@ -1057,7 +1062,7 @@
 #            print(l)
 
 
-''' OOPS For Details of Company Employee'''
+""" OOPS For Details of Company Employee"""
 # class Programmer():
 #     company = 'microsoft'
 
@@ -1077,7 +1082,7 @@
 # kivy = Programmer('kivy', 101, 'male', 'backend')
 # harry.getDetails()
 
-'''oops for squareroot'''
+"""oops for squareroot"""
 # import math
 # class Calculator:
 #     def calculate(self,num,operation):
@@ -1092,8 +1097,8 @@
 # number.calculate(10,'square')
 # number.calculate(11,'sqrt')
 
-#----------------------------------------------------------------
-'''Rabin karp'''
+# ----------------------------------------------------------------
+"""Rabin karp"""
 # def hashcode(g,glen):
 #     c=0
 #     for i in range(glen+1):
@@ -1107,7 +1112,7 @@
 #         return False
 #     code=hashcode(f,glen)
 #     ans=hashcode(g,glen)
-    
+
 #     j=0
 #     for i in range(1,len(g)):
 #         print(code,ans)
@@ -1124,7 +1129,7 @@
 #         ans=((ans-((ord(g[j]))*(26**glen)))*10)+ord(g[j+1])
 #         print(ans)
 #         j+=1
-    
+
 #     return False
 
 # given="aaabc"
@@ -1132,8 +1137,8 @@
 # c=Rabinkarp(given,find)
 # print(c)
 
-#------------------------------------------------------------------
-'''' Union Find'''
+# ------------------------------------------------------------------
+"""' Union Find"""
 
 # class Solution:
 #     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
