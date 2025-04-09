@@ -9,6 +9,9 @@ studio VARCHAR(40),
 critics_rating DECIMAL(2,1)
 );
 
+-- Use DROP TABLE if you no longer need the table.
+-- Use TRUNCATE TABLE if you want to clear all data but keep the table.
+
 ALTER TABLE movies.movies_basic RENAME COLUMN releasetear TO release_year; 
 
 DROP TABLE movies_basic ;
